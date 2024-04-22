@@ -34,4 +34,3 @@ Thx for all
 ---
 That for all.If you want to help your stats of miner you can go to solo.ckpool.org
 D0nate me with BTC:bc1qwp44lvxgrhh42de507kezjspcyh8cvw6tvuykp
-THx a lot

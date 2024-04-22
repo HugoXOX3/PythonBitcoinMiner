@@ -1,6 +1,6 @@
 # BTCSoloMiner
 ---
-The lightest solo miner in world(Only 7kb in python file)
+The lightest & 0% fee solo miner in world(Only 7kb in python file)
 ---
 ---
 Download the relase

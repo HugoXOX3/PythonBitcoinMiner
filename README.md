@@ -1,6 +1,6 @@
 # BTCSoloMiner
 ---
-Solo Miner for mining Bitcoin base on ckpool
+The lightest solo miner in world(Only 7kb in python file)
 ---
 First,Download the latest miner from release(Windows.zip/Other.zip)
 

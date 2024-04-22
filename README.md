@@ -4,7 +4,15 @@ The lightest solo miner in world(Only 7kb in python file)
 ---
 First,Download the latest miner from release(Windows.zip/Other.zip)
 
-Next,If you are windows user than run 'build.bat'.Linux and Mac user run 'build.sh' to install requirement with pip.
+Next,If you are windows user than run :
+```
+build.bat
+```
+Linux and Mac user run :
+```
+bash build.sh
+```
+ to install requirement with pip.
 
 Then,run "SoloMiner.exe" for windows user.
 

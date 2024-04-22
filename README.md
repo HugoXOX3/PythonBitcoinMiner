@@ -5,7 +5,9 @@ The lightest solo miner in world(Only 7kb in python file)
 ---
 Download the relase
 ---
+
 First,Download the latest miner from release(Windows.zip/Other.zip)
+
 ---
 to install requirement with pip
 ---

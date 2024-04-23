@@ -12,10 +12,12 @@ from datetime import datetime
 from signal import SIGINT , signal
 import context as ctx
 sock = None
+print('Donate BTC to HCMLXOX:bc1qnk0ftxa4ep296phhnxl5lv9c2s5f8xakpcxmth')
 address=input("Input your btc address:")
 print('Recommend to use pool solo.ckpool.org and port 3333')
 mining_pool=str(input("Input your mining pool:"))
 pool_port=int(input('Input your mining pool port:'))
+password=str(input("Input mining pool passowrd:(If no,input 'x')"))
 def timer() :
     tcx = datetime.now().time()
     return tcx
@@ -127,7 +129,7 @@ def block_listener(t) :
     lines = sock.recv(1024).decode().split('\n')
     response = json.loads(lines[0])
     ctx.sub_details , ctx.extranonce1 , ctx.extranonce2_size = response['result']
-    sock.sendall(b'{"params": ["' + address.encode() + b'", "password"], "id": 2, "method": "mining.authorize"}\n')
+    sock.sendall(b'{"params": ["' + address.encode() + b'", password], "id": 2, "method": "mining.authorize"}\n')
     response = b''
     while response.count(b'\n') < 4 and not (b'mining.notify' in response) : response += sock.recv(1024)
     responses = [json.loads(res) for res in response.decode().split('\n') if

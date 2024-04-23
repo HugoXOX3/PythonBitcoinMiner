@@ -14,6 +14,9 @@ from colorama import Back , Fore , Style
 import context as ctx
 sock = None
 address=input("Input your btc address:")
+print('Recommend to use pool solo.ckpool.org and port 3333')
+mining_pool=str(input("Input your mining pool:"))
+pool_port=int(input('Input your mining pool port:'))
 def timer() :
     tcx = datetime.now().time()
     return tcx
@@ -140,7 +143,7 @@ def bitcoin_miner(t , restarted = False) :
             return True
 def block_listener(t) :
     sock = socket.socket(socket.AF_INET , socket.SOCK_STREAM)
-    sock.connect(('solo.ckpool.org' , 3333))
+    sock.connect(('mining_pool' , pool_port ))
     sock.sendall(b'{"id": 1, "method": "mining.subscribe", "params": []}\n')
     lines = sock.recv(1024).decode().split('\n')
     response = json.loads(lines[0])

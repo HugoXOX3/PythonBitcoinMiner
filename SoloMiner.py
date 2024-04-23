@@ -69,7 +69,6 @@ class ExitedThread(threading.Thread) :
         pass
 def bitcoin_miner(t , restarted = False) :
     if restarted :
-        logg('\n[*] Bitcoin Miner restarted')
         print(Fore.MAGENTA , '[' , timer() , ']' , Fore.YELLOW , 'Programmer = HCMLXOX')
         print(Fore.MAGENTA , '[' , timer() , ']' , Fore.BLUE , '[*] Bitcoin Miner Restarted')
     target = (ctx.nbits[2 :] + '00' * (int(ctx.nbits[:2] , 16) - 3)).zfill(64)
@@ -84,7 +83,6 @@ def bitcoin_miner(t , restarted = False) :
     work_on = get_current_block_height()
     ctx.nHeightDiff[work_on + 1] = 0
     _diff = int("00000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" , 16)
-    logg('[*] Working to solve block with height {}'.format(work_on + 1))
     print(Fore.MAGENTA , '[' , timer() , ']' , Fore.YELLOW , '[*] Working to solve block with ' , Fore.RED ,
           'height {}'.format(work_on + 1))
     while True :
@@ -92,11 +90,8 @@ def bitcoin_miner(t , restarted = False) :
         if t.exit :
             break
         if ctx.prevhash != ctx.updatedPrevHash :
-            logg('[*] New block {} detected on network '.format(ctx.prevhash))
             print(Fore.YELLOW , '[' , timer() , ']' , Fore.MAGENTA , '[*] New block {} detected on' , Fore.BLUE ,
                   ' network '.format(ctx.prevhash))
-            logg('[*] Best difficulty will trying to solve block {} was {}'.format(work_on + 1 ,
-                                                                                   ctx.nHeightDiff[work_on + 1]))
             print(Fore.MAGENTA , '[' , timer() , ']' , Fore.GREEN , '[*] Best difficulty will trying to solve block' ,
                   Fore.WHITE , ' {} ' , Fore.BLUE ,
                   'was {}'.format(work_on + 1 ,
@@ -112,7 +107,6 @@ def bitcoin_miner(t , restarted = False) :
         hash = hashlib.sha256(hashlib.sha256(binascii.unhexlify(blockheader)).digest()).digest()
         hash = binascii.hexlify(hash).decode()
         if hash.startswith('0000000') :
-            logg('[*] New hash: {} for block {}'.format(hash , work_on + 1))
             print(Fore.MAGENTA , '[' , timer() , ']' , Fore.YELLOW , '[*] New hash:' , Fore.WHITE , ' {} for block' ,
                   Fore.WHITE ,
                   ' {}'.format(hash , work_on + 1))
@@ -122,22 +116,17 @@ def bitcoin_miner(t , restarted = False) :
         if ctx.nHeightDiff[work_on + 1] < difficulty :
             ctx.nHeightDiff[work_on + 1] = difficulty
         if hash < target :
-            logg('[*] Block {} solved.'.format(work_on + 1))
             print(Fore.MAGENTA , '[' , timer() , ']' , Fore.YELLOW , '[*] Block {} solved.'.format(work_on + 1))
-            logg('[*] Block hash: {}'.format(hash))
             print(Fore.YELLOW)
             print(Fore.MAGENTA , '[' , timer() , ']' , Fore.YELLOW , '[*] Block hash: {}'.format(hash))
-            logg('[*] Blockheader: {}'.format(blockheader))
 
             print(Fore.YELLOW , '[*] Blockheader: {}'.format(blockheader))
             payload = bytes('{"params": ["' + address + '", "' + ctx.job_id + '", "' + ctx.extranonce2 \
                             + '", "' + ctx.ntime + '", "' + nonce + '"], "id": 1, "method": "mining.submit"}\n' ,
                             'utf-8')
-            logg('[*] Payload: {}'.format(payload))
             print(Fore.MAGENTA , '[' , timer() , ']' , Fore.BLUE , '[*] Payload:' , Fore.GREEN , ' {}'.format(payload))
             sock.sendall(payload)
             ret = sock.recv(1024)
-            logg('[*] Pool response: {}'.format(ret))
             print(Fore.MAGENTA , '[' , timer() , ']' , Fore.GREEN , '[*] Pool Response:' , Fore.CYAN ,
                   ' {}'.format(ret))
             return True
@@ -206,11 +195,9 @@ class NewSubscribeThread(ExitedThread) :
 def StartMining() :
     subscribe_t = NewSubscribeThread(None)
     subscribe_t.start()
-    logg("[*] Subscribe thread started.")
     print(Fore.MAGENTA , "[" , timer() , "]" , Fore.GREEN , "[*] Subscribe thread started.")
     miner_t = CoinMinerThread(None)
     miner_t.start()
-    logg("[*] Bitcoin Miner Thread Started")
     print(Fore.MAGENTA , "[" , timer() , "]" , Fore.GREEN , "[*] Bitcoin Miner Thread Started")
     print(Fore.BLUE , '--------------~~( ' , Fore.YELLOW , 'By HCMLXOX' , Fore.BLUE , ' )~~--------------')
 if __name__ == '__main__' :

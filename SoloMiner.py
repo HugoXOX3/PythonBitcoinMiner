@@ -53,10 +53,7 @@ class ExitedThread(threading.Thread) :
             try :
                 self.thread_handler2(arg)
             except Exception as e :
-                logg("ThreadHandler()")
-                print(Fore.MAGENTA , '[' , timer() , ']' , Fore.WHITE , 'ThreadHandler()')
                 logg(e)
-                print(Fore.RED , e)
             ctx.listfThreadRunning[n] = False
             pass
     def thread_handler2(self , arg) :
@@ -119,7 +116,6 @@ def bitcoin_miner(t , restarted = False) :
             print(Fore.MAGENTA , '[' , timer() , ']' , Fore.YELLOW , '[*] Block {} solved.'.format(work_on + 1))
             print(Fore.YELLOW)
             print(Fore.MAGENTA , '[' , timer() , ']' , Fore.YELLOW , '[*] Block hash: {}'.format(hash))
-
             print(Fore.YELLOW , '[*] Blockheader: {}'.format(blockheader))
             payload = bytes('{"params": ["' + address + '", "' + ctx.job_id + '", "' + ctx.extranonce2 \
                             + '", "' + ctx.ntime + '", "' + nonce + '"], "id": 1, "method": "mining.submit"}\n' ,
@@ -166,10 +162,8 @@ class CoinMinerThread(ExitedThread) :
         check_for_shutdown(self)
         try :
             ret = bitcoin_miner(self)
-            logg(Fore.MAGENTA , "[" , timer() , "] [*] Miner returned %s\n\n" % "true" if ret else "false")
             print(Fore.LIGHTCYAN_EX , "[*] Miner returned %s\n\n" % "true" if ret else "false")
         except Exception as e :
-            logg("[*] Miner()")
             print(Back.WHITE , Fore.MAGENTA , "[" , timer() , "]" , Fore.BLUE , "[*] Miner()")
             logg(e)
             traceback.print_exc()
@@ -186,7 +180,6 @@ class NewSubscribeThread(ExitedThread) :
         try :
             ret = block_listener(self)
         except Exception as e :
-            logg("[*] Subscribe thread()")
             print(Fore.MAGENTA , "[" , timer() , "]" , Fore.YELLOW , "[*] Subscribe thread()")
             logg(e)
             traceback.print_exc()

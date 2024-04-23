@@ -38,8 +38,6 @@ Coming Preferences
 
 *More lighter than before
 
-*Be useful
-
 ---
 Warning
 ---

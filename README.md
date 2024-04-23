@@ -44,7 +44,7 @@ Coming Preferences
 Warning
 ---
 
-⚠️The Clone version,whuch is a debug version only for Pro Programmer,may have some unpredictable error
+⚠️The Clone version,which is a debug version only for Pro Programmer,may have some unpredictable error
 
 ---
 Thx for all

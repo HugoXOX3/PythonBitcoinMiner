@@ -29,6 +29,15 @@ Linux and Mac user run:
 python Solominer.py
 ```
 After that,input your btc address in cmd or terminal.
+
+---
+Coming Preferences
+---
+
+*Customise Solo Mining pool
+*More lighter than before
+*Be useful
+
 ---
 Thx for all
 ---

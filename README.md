@@ -35,8 +35,16 @@ Coming Preferences
 ---
 
 *Customise Solo Mining pool
+
 *More lighter than before
+
 *Be useful
+
+---
+Warning
+---
+
+⚠️The Clone version,whuch is a debug version only for Pro Programmer,may have some unpredictable error
 
 ---
 Thx for all

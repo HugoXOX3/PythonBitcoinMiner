@@ -49,4 +49,4 @@ Thx for all
 ---
 That for all.If you want to view your stats of miner you can go to solo.ckpool.org
 
-D0nate me with BTC:bc1qwp44lvxgrhh42de507kezjspcyh8cvw6tvuykp
+D0nate me with BTC:bc1qnk0ftxa4ep296phhnxl5lv9c2s5f8xakpcxmth

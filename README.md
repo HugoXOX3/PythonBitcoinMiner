@@ -6,7 +6,7 @@ The lightest & 0% fee solo miner(Only 7kb in python file)
 Download the relase
 ---
 
-First,Download the latest miner from release(Windows.zip/Other.zip)
+First,Download the latest miner from [release(Windows.zip/Other.zip)](https://github.com/HugoXOX3/BTCSoloMiner/releases)
 
 ---
 to install requirement with pip

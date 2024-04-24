@@ -6,7 +6,8 @@ The lightest & 0% fee solo miner(Only 7kb in python file)
 Requirement
 ---
 
-python3.x
+Python3.x
+[Go Download](https://www.python.org/)
 
 ---
 Download the relase

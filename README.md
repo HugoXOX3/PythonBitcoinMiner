@@ -3,6 +3,12 @@
 The lightest & 0% fee solo miner(Only 7kb in python file)
 ---
 ---
+Requirement
+---
+
+python3.x
+
+---
 Download the relase
 ---
 
@@ -42,7 +48,7 @@ Coming Preferences
 Warning
 ---
 
-⚠️The Clone version,which is a debug version only for Pro Programmer,may have some unpredictable error
+⚠️Coming soon(bruh)
 
 ---
 Thx for all

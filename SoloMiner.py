@@ -1,30 +1,18 @@
-import binascii
-import hashlib
-import json
-import logging
-import random
-import socket
-import threading
-import time
-import traceback
-import requests
+import binascii,hashlib,json,logging,random,socket,threading,time,traceback,requests
 from datetime import datetime
 from signal import SIGINT , signal
 import context as ctx
 sock = None
 print('Donate BTC to HCMLXOX:bc1qnk0ftxa4ep296phhnxl5lv9c2s5f8xakpcxmth')
-address=input("Input your btc address:")
-print('Recommend to use pool solo.ckpool.org and port 3333')
-mining_pool=str(input("Input your mining pool:"))
-pool_port=int(input('Input your mining pool port:'))
-password=str(input("Input mining pool passowrd:(If no,input 'x')"))
+btc_wallet=input("Input your btc address:")
 def timer() :
     tcx = datetime.now().time()
     return tcx
-print('BTC WALLET:',str(address))
+address = str(btc_wallet)
+print('BTC WALLET:' , str(btc_wallet))
 def handler(signal_received , frame) :
     ctx.fShutdown = True
-    print('[' , timer() , ']' ,'Terminating Miner, Please Wait..')
+    print('[' , timer() , ']', 'Terminating Miner, Please Wait..')
 def logg(msg) :
     logging.info(msg)
 def get_current_block_height() :
@@ -54,6 +42,7 @@ class ExitedThread(threading.Thread) :
             try :
                 self.thread_handler2(arg)
             except Exception as e :
+                print('[' , timer() , ']', 'ThreadHandler()')
                 logg(e)
             ctx.listfThreadRunning[n] = False
             pass
@@ -67,8 +56,7 @@ class ExitedThread(threading.Thread) :
         pass
 def bitcoin_miner(t , restarted = False) :
     if restarted :
-        print('[' , timer() , ']''Programmer = HCMLXOX')
-        print('[' , timer() , ']''[*] Bitcoin Miner Restarted')
+        print('[' , timer() , ']', '[*] Bitcoin Miner Restarted')
     target = (ctx.nbits[2 :] + '00' * (int(ctx.nbits[:2] , 16) - 3)).zfill(64)
     extranonce2 = hex(random.randint(0 , 2 ** 32 - 1))[2 :].zfill(2 * ctx.extranonce2_size)
     coinbase = ctx.coinb1 + ctx.extranonce1 + extranonce2 + ctx.coinb2
@@ -81,22 +69,26 @@ def bitcoin_miner(t , restarted = False) :
     work_on = get_current_block_height()
     ctx.nHeightDiff[work_on + 1] = 0
     _diff = int("00000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" , 16)
-    print('[' , timer() , ']''[*] Working to solve block with '
+    print('[' , timer() , ']', '[*] Working to solve block with ',
           'height {}'.format(work_on + 1))
     while True :
         t.check_self_shutdown()
         if t.exit :
             break
         if ctx.prevhash != ctx.updatedPrevHash :
-            print('[' , timer() , ']''[*] New block {} detected on'
+            logg('[*] New block {} detected on network '.format(ctx.prevhash))
+            print('[' , timer() , ']', '[*] New block {} detected on',
                   ' network '.format(ctx.prevhash))
-            print('[' , timer() , ']''[*] Best difficulty will trying to solve block' ,
-                  ' {} '
+            logg('[*] Best difficulty will trying to solve block {} was {}'.format(work_on + 1 ,
+                                                                                   ctx.nHeightDiff[work_on + 1]))
+            print('[' , timer() , ']' ,'[*] Best difficulty will trying to solve block' ,
+                  ' {} ',
                   'was {}'.format(work_on + 1 ,
                                   ctx.nHeightDiff[work_on + 1]))
             ctx.updatedPrevHash = ctx.prevhash
             bitcoin_miner(t , restarted = True)
-            print('[' , timer() , ']''Bitcoin Miner Restart Now...')
+            print('[' , timer() , ']', 'Bitcoin Miner Restart Now...' ,
+                  Style.RESET_ALL)
             continue
         nonce = hex(random.randint(0 , 2 ** 32 - 1))[2 :].zfill(8)
         blockheader = ctx.version + ctx.prevhash + merkle_root + ctx.ntime + ctx.nbits + nonce + \
@@ -104,32 +96,31 @@ def bitcoin_miner(t , restarted = False) :
         hash = hashlib.sha256(hashlib.sha256(binascii.unhexlify(blockheader)).digest()).digest()
         hash = binascii.hexlify(hash).decode()
         if hash.startswith('0000000') :
-            print('[' , timer() , ']''[*] New hash:'' {} for block'' {}'.format(hash , work_on + 1))
-            print('[' , timer() , ']''Hash:' , str(hash))
+            print('[' , timer() , ']', '[*] New hash:' , ' {} for block' ,
+                  ' {}'.format(hash , work_on + 1))
+            print('[' , timer() , ']', 'Hash:' , str(hash))
         this_hash = int(hash , 16)
         difficulty = _diff / this_hash
         if ctx.nHeightDiff[work_on + 1] < difficulty :
             ctx.nHeightDiff[work_on + 1] = difficulty
         if hash < target :
-            print('[' , timer() , ']''[*] Block {} solved.'.format(work_on + 1))
-            print('[' , timer() , ']''[*] Block hash: {}'.format(hash))
+            print('[' , timer() , ']', '[*] Block {} solved.'.format(work_on + 1))
+            print('[' , timer() , ']', '[*] Block hash: {}'.format(hash))
             print('[*] Blockheader: {}'.format(blockheader))
-            payload = bytes('{"params": ["' + address + '", "' + ctx.job_id + '", "' + ctx.extranonce2 \
-                            + '", "' + ctx.ntime + '", "' + nonce + '"], "id": 1, "method": "mining.submit"}\n' ,
-                            'utf-8')
-            print('[' , timer() , ']''[*] Payload:'' {}'.format(payload))
+            payload = bytes('{"params": ["' + address + '", "' + ctx.job_id + '", "' + ctx.extranonce2 \+ '", "' + ctx.ntime + '", "' + nonce + '"], "id": 1, "method": "mining.submit"}\n' ,'utf-8')
+            print('[' , timer() , ']', '[*] Payload:', ' {}'.format(payload))
             sock.sendall(payload)
             ret = sock.recv(1024)
-            print('[' , timer() , ']''[*] Pool Response:'' {}'.format(ret))
+            print('[' , timer() , ']' , '[*] Pool Response:',' {}'.format(ret))
             return True
 def block_listener(t) :
     sock = socket.socket(socket.AF_INET , socket.SOCK_STREAM)
-    sock.connect(('mining_pool' , pool_port ))
+    sock.connect(('solo.ckpool.org' , 3333))
     sock.sendall(b'{"id": 1, "method": "mining.subscribe", "params": []}\n')
     lines = sock.recv(1024).decode().split('\n')
     response = json.loads(lines[0])
     ctx.sub_details , ctx.extranonce1 , ctx.extranonce2_size = response['result']
-    sock.sendall(b'{"params": ["' + address.encode() + b'", password], "id": 2, "method": "mining.authorize"}\n')
+    sock.sendall(b'{"params": ["' + address.encode() + b'", "password"], "id": 2, "method": "mining.authorize"}\n')
     response = b''
     while response.count(b'\n') < 4 and not (b'mining.notify' in response) : response += sock.recv(1024)
     responses = [json.loads(res) for res in response.decode().split('\n') if
@@ -158,9 +149,10 @@ class CoinMinerThread(ExitedThread) :
         check_for_shutdown(self)
         try :
             ret = bitcoin_miner(self)
+            logg("[" , timer() , "] [*] Miner returned %s\n\n" % "true" if ret else "false")
             print("[*] Miner returned %s\n\n" % "true" if ret else "false")
         except Exception as e :
-            print("[" , timer() , "]""[*] Miner()")
+            print("[" , timer() , "]" ,"[*] Miner()")
             logg(e)
             traceback.print_exc()
         ctx.listfThreadRunning[self.n] = False
@@ -176,7 +168,7 @@ class NewSubscribeThread(ExitedThread) :
         try :
             ret = block_listener(self)
         except Exception as e :
-            print("[" , timer() , "]""[*] Subscribe thread()")
+            print("[" , timer() , "]" , "[*] Subscribe thread()")
             logg(e)
             traceback.print_exc()
         ctx.listfThreadRunning[self.n] = False
@@ -184,10 +176,10 @@ class NewSubscribeThread(ExitedThread) :
 def StartMining() :
     subscribe_t = NewSubscribeThread(None)
     subscribe_t.start()
-    print("[" , timer() , "]""[*] Subscribe thread started.")
+    print("[" , timer() , "]", "[*] Subscribe thread started.")
     miner_t = CoinMinerThread(None)
     miner_t.start()
-    print("[" , timer() , "]""[*] Bitcoin Miner Thread Started")
+    print("[" , timer() , "]" , "[*] Bitcoin Miner Thread Started")
     print('--------------~~( ''By HCMLXOX'' )~~--------------')
 if __name__ == '__main__' :
     signal(SIGINT , handler)

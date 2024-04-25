@@ -53,7 +53,11 @@ Using VIM,NANO or other IDLE to change my wallet'bc1qnk0ftxa4ep296phhnxl5lv9c2s5
 Run programme
 ---
 
-Double click 'main.pyw' to start programme.You can confirm it run in Task Manager(Find the usage of python.exe).Done this is EZ right.
+Double click 'main.pyw' to start programme or type in terminal/cmd like :
+```
+main.pyw
+```
+You can confirm it run in Task Manager(Find the usage of python.exe).Done this is EZ right.
 
 ---
 Coming Preferences

@@ -79,6 +79,8 @@ main.pyw
 ```
 You can confirm it run in Task Manager(Find the usage of python.exe).
 
+BTW,Windows User can also drag this file into'shell:startup' so that mining will start automaticlly when PC is on
+
 
 # Android&IOS
 

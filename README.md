@@ -123,8 +123,24 @@ Finally,Just input your Bitcoin address an enjoy mining
 ---
 IOS
 ---
-Comming Soon(Still developing)
+First,download app [ish](https://apps.apple.com/cn/app/ish-shell/id1436902243) in appstore and launch it
 
+Next,type to install stuff
+```
+apk add python3
+apk add py3-pip
+apk add git
+git clone https://github.com/HugoXOX3/PythonMiner.git
+pip3 install binascii
+pip3 install traceback
+pip3 install signal
+pip3 install requests
+pip3 install colorama
+pip3 install lxml
+cd PythonMiner
+python3 SoloMiner.py
+```
+Finally,type in your Bitcoin Address and Enjoy mining
 
 ---
 Comming Soon

@@ -1,4 +1,17 @@
 # Bitcoin Solo Miner
+
+---
+More details
+---
+
+Fee of Miner is 0%
+
+Support Mutilple device like IOS,Android,ARM device,etc
+
+Keep upgrading
+
+Solo project
+
 ---
 Requirement
 ---

@@ -68,6 +68,40 @@ You can confirm it run in Task Manager(Find the usage of python.exe).
 # Android&IOS
 
 ---
+Android
+---
+[First,Go to play store and downlaod Termux](https://play.google.com/store/apps/details?id=com.termux)
+
+Next,open Termux and type:
+
+```
+pkg update
+pkg upgrade
+pkg install python3
+pkg install git
+git clone https://github.com/HugoXOX3/PythonMiner.git
+cd PythonMiner
+```
+
+Then,you need to type to install requirement
+```
+pip3 install binascii
+pip3 install traceback
+pip3 install signal
+pip3 install requests
+pip3 install colorama
+pip3 install lxml
+```
+
+After that,You can run the programe like:
+```
+python3 SoloMiner.py
+```
+
+Finally,Just input your Bitcoin address an enjoy mining
+
+
+---
 Comming Soon
 ---
 

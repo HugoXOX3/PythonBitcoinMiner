@@ -1,8 +1,5 @@
 # Bitcoin Solo Miner
 ---
-The lightest & 0% fee solo miner
----
----
 Requirement
 ---
 

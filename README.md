@@ -125,11 +125,7 @@ Comming Soon(Still developing)
 Comming Soon
 ---
 
-
-
----
-Coming Preferences
----
+*Mining with IOS(I already have some ideas to mine on by using [ish](https://github.com/ish-app/ish)
 
 *Customise Solo Mining pool
 

@@ -14,7 +14,7 @@ Download the relase
 
 First,Download the latest miner from [release(Windows.zip/Other.zip/Hide_consoele_version.zip)](https://github.com/HugoXOX3/BTCSoloMiner/releases)
 
-# Use with
+# Mining BTC with
 
 [Windows/Linux](https://github.com/HugoXOX3/PythonMiner#for-normal-versionwindowszipnormalzip)
 

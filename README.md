@@ -64,6 +64,15 @@ main.pyw
 ```
 You can confirm it run in Task Manager(Find the usage of python.exe).
 
+
+# Android&IOS
+
+---
+Comming Soon
+---
+
+
+
 ---
 Coming Preferences
 ---

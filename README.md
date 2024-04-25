@@ -142,6 +142,10 @@ python3 SoloMiner.py
 ```
 Finally,type in your Bitcoin Address and Enjoy mining
 
+Like:
+
+![example](https://github.com/HugoXOX3/PythonMiner/blob/main/EF7F484D-872F-4CA6-9607-D1A67429DE12.jpeg)
+
 ---
 Comming Soon
 ---

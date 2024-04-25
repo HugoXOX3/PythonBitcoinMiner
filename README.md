@@ -57,7 +57,7 @@ Double click 'main.pyw' to start programme or type in terminal/cmd like :
 ```
 main.pyw
 ```
-You can confirm it run in Task Manager(Find the usage of python.exe).Done this is EZ right.
+You can confirm it run in Task Manager(Find the usage of python.exe).
 
 ---
 Coming Preferences

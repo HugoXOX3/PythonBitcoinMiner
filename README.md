@@ -16,7 +16,7 @@ Download the relase
 First,Download the latest miner from [release(Windows.zip/Other.zip/Hide_consoele_version.zip)](https://github.com/HugoXOX3/BTCSoloMiner/releases)
 
 
-# For Normal Version
+# For Normal Version(Windows.zip/Normal.zip)
 
 
 ---

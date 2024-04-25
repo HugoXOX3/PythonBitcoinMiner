@@ -150,11 +150,11 @@ Like:
 Comming Soon
 ---
 
-*Customise Solo Mining pool
-
 *More lighter than before
 
 ✅Mining with IOS(I already have some ideas to mine on it by using [ish](https://github.com/ish-app/ish)
+
+❌Customise Solo Mining pool(Bug occur)
 
 ---
 Warning

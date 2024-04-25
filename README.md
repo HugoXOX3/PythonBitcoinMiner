@@ -44,7 +44,7 @@ After that,input your btc address in cmd or terminal.
 
 # For Hide Console Version
 ---
-Change the address in main.py
+Change the address in main.pyw
 ---
 Using VIM,NANO or other IDLE to change my wallet'bc1qnk0ftxa4ep296phhnxl5lv9c2s5f8xakpcxmth' to yours btc address.
 

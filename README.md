@@ -102,6 +102,11 @@ python3 SoloMiner.py
 
 Finally,Just input your Bitcoin address an enjoy mining
 
+---
+IOS
+---
+Comming Soon(Still developing)
+
 
 ---
 Comming Soon

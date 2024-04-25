@@ -6,7 +6,7 @@ Requirement
 Python3.x
 [Go Download](https://www.python.org/)
 
-Bitcoin Address:[Bitcoin Core](https://bitcoin.org/en/bitcoin-core/)/[Electrum](https://electrum.org/?ref=hackernoon.com) etc(Just prepare address that you want to)
+Create your own Bitcoin Address:[Bitcoin Core](https://bitcoin.org/en/bitcoin-core/)/[Electrum](https://electrum.org/?ref=hackernoon.com) etc(Just prepare address that you want to)
 
 ---
 Download the relase

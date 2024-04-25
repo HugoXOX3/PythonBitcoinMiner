@@ -53,7 +53,10 @@ bash build.sh
 ---
 Run programme
 ---
-Then,run "SoloMiner.exe" for windows user.
+Then,run "SoloMiner.exe" for windows user:
+```
+SoloMiner.exe
+```
 
 Linux and Mac user run:
 ```

@@ -87,6 +87,8 @@ BTW,Windows User can also drag this file into'shell:startup' so that mining will
 
 # Android&IOS
 
+The ways I find out to run this miner on Android and IOS is the run a Linux Terminal on them like Termux & Ish
+
 ---
 Android
 ---

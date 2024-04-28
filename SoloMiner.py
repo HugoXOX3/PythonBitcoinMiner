@@ -5,11 +5,6 @@ from colorama import Back , Fore , Style
 import context as ctx
 sock = None
 
-with open(filename, 'r') as file:
-    addresses = file.readlines()
-    for address in addresses:
-        address=address.strip()
-
 def timer() :
     tcx = datetime.now().time()
     return tcx

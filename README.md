@@ -12,6 +12,8 @@ Deafult Pool is [Ckpool](https://solo.ckpool.org)
 
 Can Customise Solo Miner Pool(Still recommend ckpool Cuz it has the highest compatibility)
 
+Customise Pool can get in Git clone Version now
+
 Keep upgrading
 
 Solo project

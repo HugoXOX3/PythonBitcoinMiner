@@ -76,6 +76,8 @@ python Solominer.py
 ```
 After that,input your btc address in cmd or terminal.
 
+Example:
+
 ![Windows example](https://github.com/HugoXOX3/PythonMiner/blob/main/Windows%20Version.png)
 
 

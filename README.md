@@ -178,5 +178,5 @@ Done & unpossible
 
 ✅Save Address Function
 
-❌Customise Solo Mining pool(Bug occur)
+✅Customise Solo Mining pool(Bug Fix)
 

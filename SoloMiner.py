@@ -1,4 +1,4 @@
-import binascii,hashlib,json,logging,random,socket,threading,time,traceback,requests
+import binascii,hashlib,json,logging,random,socket,threading,time,traceback,requests,colorama
 from datetime import datetime
 from signal import SIGINT , signal
 from colorama import Back , Fore , Style
@@ -9,21 +9,30 @@ def timer() :
     tcx = datetime.now().time()
     return tcx
 
-print('Donate BTC to HCMLXOX:bc1qnk0ftxa4ep296phhnxl5lv9c2s5f8xakpcxmth')
-address=str(input('Type In your bitcoin address:'))
+#Address Log In
+temp=str(input('Use Stored Address:(Y/N)'))
+if temp=='N':
+        print('Donate BTC to HCMLXOX:bc1qnk0ftxa4ep296phhnxl5lv9c2s5f8xakpcxmth')
+        address=str(input('Type In your bitcoin address:'))
+        temp1=str(input('Save Address in Address.txt(Y/N)?'))
+        if temp1=='Y':
+            with open("address.txt", "w") as file:
+                file.write(address)
+                print('Address Saved')
+else:
+    print('Opening Address.txt')
+    with open("address.txt", "r") as file:
+        address = file.read()
 
 print(Back.BLUE , Fore.WHITE , 'BTC WALLET:' , Fore.BLACK , str(address) , Style.RESET_ALL)
-
 
 def handler(signal_received , frame) :
     # Handle any cleanup here
     ctx.fShutdown = True
     print(Fore.MAGENTA , '[' , timer() , ']' , Fore.YELLOW , 'Terminating Miner, Please Wait..')
 
-
 def logg(msg) :
     logging.info(msg)
-
 
 def get_current_block_height() :
     # returns the current network height
@@ -38,7 +47,6 @@ def check_for_shutdown(t) :
         if n != -1 :
             ctx.listfThreadRunning[n] = False
             t.exit = True
-
 
 class ExitedThread(threading.Thread) :
     def __init__(self , arg , n) :
@@ -79,7 +87,6 @@ class ExitedThread(threading.Thread) :
         self.exit = True
         ctx.listfThreadRunning[self.n] = False
         pass
-
 
 def bitcoin_miner(t , restarted = False) :
     if restarted :

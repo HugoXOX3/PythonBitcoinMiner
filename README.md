@@ -76,6 +76,8 @@ python Solominer.py
 ```
 After that,input your btc address in cmd or terminal.
 
+![Windows example](https://github.com/HugoXOX3/PythonMiner/blob/main/Windows%20Version.png)
+
 
 # For Hide Console Version
 ---
@@ -158,7 +160,7 @@ Finally,type in your Bitcoin Address and Enjoy mining
 
 Like:
 
-![example](https://github.com/HugoXOX3/PythonMiner/blob/main/EF7F484D-872F-4CA6-9607-D1A67429DE12.jpeg)
+![example](https://github.com/HugoXOX3/PythonMiner/blob/main/IOS.jpeg)
 
 ---
 Comming Soon

@@ -1,7 +1,7 @@
 # Bitcoin Solo Miner
 
 ---
-More details
+Details
 ---
 
 Fee of Miner is 0%

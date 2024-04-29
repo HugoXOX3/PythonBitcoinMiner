@@ -176,5 +176,7 @@ Done & unpossible
 
 ✅Mining with IOS(I already have some ideas to mine on it by using [ish](https://github.com/ish-app/ish)
 
+✅Save Address Function
+
 ❌Customise Solo Mining pool(Bug occur)
 

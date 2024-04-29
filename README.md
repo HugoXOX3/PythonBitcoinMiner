@@ -8,6 +8,10 @@ Fee of Miner is 0%
 
 Support Mutilple device like IOS,Android,ARM device,etc
 
+Deafult Pool is [Ckpool](solo.ckpool.org)
+
+Can Customise Solo Miner Pool(Still recommend ckpool Cuz it has the highest compatibility)
+
 Keep upgrading
 
 Solo project

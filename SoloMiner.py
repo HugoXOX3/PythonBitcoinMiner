@@ -24,6 +24,16 @@ else:
     with open("address.txt", "r") as file:
         address = file.read()
 
+temp2=str(input('Use deafult pool(ckpool) or Not(Y/N)'))
+if temp2=='Y':
+    pool='solo.ckpool.org'
+    port=3333
+    print('Pool: is solo.ckpool.org and Port is 3333')
+else:
+    print('Can Use Other Solo Pool like public-pool or nerdminers pool')
+    pool=str(input("Mining Pool that you want:"))
+    port=int(input("Mining Pool Port:"))
+
 print(Back.BLUE , Fore.WHITE , 'BTC WALLET:' , Fore.BLACK , str(address) , Style.RESET_ALL)
 
 def handler(signal_received , frame) :
@@ -185,7 +195,7 @@ def bitcoin_miner(t , restarted = False) :
             return True
 def block_listener(t) :
     sock = socket.socket(socket.AF_INET , socket.SOCK_STREAM)
-    sock.connect(('solo.ckpool.org' , 3333))
+    sock.connect((pool , port))
     sock.sendall(b'{"id": 1, "method": "mining.subscribe", "params": []}\n')
     lines = sock.recv(1024).decode().split('\n')
     response = json.loads(lines[0])

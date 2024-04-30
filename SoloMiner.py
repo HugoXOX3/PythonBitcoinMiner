@@ -3,13 +3,7 @@ from datetime import datetime
 from signal import SIGINT , signal
 from colorama import Back , Fore , Style
 import context as ctx
-sock = None
 
-def timer() :
-    tcx = datetime.now().time()
-    return tcx
-
-#Address Log In
 temp=str(input('Use Stored Address:(Y/N)'))
 if temp=='N':
         print('Donate BTC to HCMLXOX:bc1qnk0ftxa4ep296phhnxl5lv9c2s5f8xakpcxmth')
@@ -23,18 +17,37 @@ else:
     print('Opening Address.txt')
     with open("address.txt", "r") as file:
         address = file.read()
-
 temp2=str(input('Use deafult pool(ckpool) or Not(Y/N)'))
 if temp2=='Y':
     pool='solo.ckpool.org'
     port=3333
     print('Pool: is solo.ckpool.org and Port is 3333')
 else:
-    print('Can Use Other Solo Pool like public-pool or nerdminers pool')
-    pool=str(input("Mining Pool that you want:"))
-    port=int(input("Mining Pool Port:"))
+    temp3=str(input('Are you interest in using pool like public-pool or nerdminers pool?(Y/N)'))
+    if temp3=='N':
+        pool=str(input("Mining Pool that you want:"))
+        port=int(input("Mining Pool Port:"))
+    else:
+        print("Type '1' is public-pool(https://web.public-pool.io/)")
+        print("Type '2' is nerdminers pool(https://pool.nerdminers.org)")
+        temp4=int(input("Type the number to choose pool you want"))
+        if temp4==1:
+            pool='public-pool.io'
+            port=21496
+        else:
+            pool='pool.nerdminers.org'
+            port=3333
+            
+time.sleep(1)
 
 print(Back.BLUE , Fore.WHITE , 'BTC WALLET:' , Fore.BLACK , str(address) , Style.RESET_ALL)
+
+sock = None
+
+def timer() :
+    tcx = datetime.now().time()
+    return tcx
+
 
 def handler(signal_received , frame) :
     # Handle any cleanup here

@@ -121,10 +121,6 @@ cd PythonMiner
 
 Then,you need to type to install requirement
 ```
-pip3 install traceback
-pip3 install signal
-pip3 install requests
-pip3 install colorama
 pip3 install lxml
 ```
 
@@ -146,10 +142,6 @@ apk add python3
 apk add py3-pip
 apk add git
 git clone https://github.com/HugoXOX3/PythonMiner.git
-pip3 install traceback
-pip3 install signal
-pip3 install requests
-pip3 install colorama
 pip3 install lxml
 cd PythonMiner
 python3 SoloMiner.py

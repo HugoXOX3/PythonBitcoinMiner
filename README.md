@@ -23,6 +23,12 @@ Can Customise Solo Miner Pool(Still recommend ckpool Cuz it has the highest comp
 Password is 'x' cuz most pool didnt have passwd or ignore it
 
 ---
+Error Occur?
+---
+
+[Go to here](https://github.com/HugoXOX3/PythonMiner/blob/main/FixBug.md) to find out the reason and fix it.
+
+---
 Requirement
 ---
 

@@ -1,14 +1,13 @@
 # Fix Error
 
 ---
-EZ Finder
+Tips
 ---
 
-'ret = bitcoin_miner(self)' or 'target = (ctx.nbits[2 :] + '00' * (int(ctx.nbits[:2] , 16) - 3)).zfill(64)'
-       ^^^^^^^^^^^^^^^^^^^                ~~~~~~~~~^^^^^
+Use 'Crtl' + 'F' to search error like 'line xxx' or 'Type Error' to find the ways to fix error easily
 
 ---
-'Line 231/108' Error
+Error 1
 ---
 ```
 PS C:\Users\user\Desktop\Other>  & 'c:\Users\user\AppData\Local\Programs\Python\Python312\python.exe' 'c:\Users\user\.vscode\extensions\ms-python.debugpy-2024.4.0-win32-x64\bundled\libs\debugpy\adapter/../..\debugpy\launcher' '51020' '--' 'C:\Users\user\Desktop\Other\SoloMiner.py'

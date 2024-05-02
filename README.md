@@ -186,7 +186,7 @@ Contact me
 [Telegrame](https://t.me/iamnotniko)
 
 ---
-Done & unpossible
+Done
 ---
 
 ✅Mining with IOS(I already have some ideas to mine on it by using [ish](https://github.com/ish-app/ish)

@@ -89,10 +89,15 @@ Example:
 
 # For Hide Console Version
 ---
+Requriment
+---
+
+Remeber to install python3,pip3,and lxml like normal
+
+---
 Change the address in main.pyw
 ---
 Using VIM,NANO or other IDLE to change my wallet'bc1qnk0ftxa4ep296phhnxl5lv9c2s5f8xakpcxmth' to yours btc address.
-
 
 ---
 Run programme

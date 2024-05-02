@@ -4,12 +4,11 @@ from signal import SIGINT , signal
 from colorama import Back , Fore , Style
 import context as ctx
 
-sock = None
+address='bc1qnk0ftxa4ep296phhnxl5lv9c2s5f8xakpcxmth'
+pool='solo.ckpool.org'
+port=3333
 
-with open(filename, 'r') as file:
-    addresses = file.readlines()
-    for address in addresses:
-        address=address.strip()
+sock = None
 
 def timer() :
     tcx = datetime.now().time()
@@ -17,7 +16,7 @@ def timer() :
 
 print('Donate BTC to HCMLXOX:bc1qnk0ftxa4ep296phhnxl5lv9c2s5f8xakpcxmth')
 #Change it to yours address
-address='bc1qnk0ftxa4ep296phhnxl5lv9c2s5f8xakpcxmth'
+
 
 print(Back.BLUE , Fore.WHITE , 'BTC WALLET:' , Fore.BLACK , str(address) , Style.RESET_ALL)
 
@@ -185,7 +184,7 @@ def bitcoin_miner(t , restarted = False) :
             return True
 def block_listener(t) :
     sock = socket.socket(socket.AF_INET , socket.SOCK_STREAM)
-    sock.connect(('solo.ckpool.org' , 3333))
+    sock.connect((pool , port))
     sock.sendall(b'{"id": 1, "method": "mining.subscribe", "params": []}\n')
     lines = sock.recv(1024).decode().split('\n')
     response = json.loads(lines[0])

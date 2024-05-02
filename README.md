@@ -51,6 +51,8 @@ First,Download the latest miner from [release(Windows.zip/Other.zip/Hide_consoel
 
 [Android & IOS](https://github.com/HugoXOX3/PythonMiner#androidios)
 
+[UNIX](https://github.com/HugoXOX3/PythonMiner/blob/main/UNIX.md)
+
 
 # For Normal Version(Windows.zip/Other.zip)
 

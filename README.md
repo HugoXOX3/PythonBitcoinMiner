@@ -183,7 +183,7 @@ That for all.If you want to view your stats of miner you can go to [solo.ckpool.
 Contact me
 ---
 
-[Telegrame](t.me/iamnotniko)
+[Telegrame](https://t.me/iamnotniko)
 
 ---
 Done & unpossible

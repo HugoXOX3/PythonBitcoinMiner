@@ -82,7 +82,7 @@ After that,input your btc address in cmd or terminal.
 
 Example:
 
-![Windows example](https://github.com/HugoXOX3/PythonMiner/blob/main/Windows%20Version.png)
+![Windows example](https://github.com/HugoXOX3/PythonMiner/blob/main/Image/Windows%20Version.png)
 
 
 # For Hide Console Version
@@ -156,7 +156,7 @@ Finally,type in your Bitcoin Address and Enjoy mining
 
 Like:
 
-![example](https://github.com/HugoXOX3/PythonMiner/blob/main/IOS.jpeg)
+![example](https://github.com/HugoXOX3/PythonMiner/blob/main/Image/IOS.jpeg)
 
 ---
 Comming Soon
@@ -177,7 +177,7 @@ That for all.If you want to view your stats of miner you can go to [solo.ckpool.
 
 [D0nate me with BTC:bc1qnk0ftxa4ep296phhnxl5lv9c2s5f8xakpcxmth](bitcoin:bc1qnk0ftxa4ep296phhnxl5lv9c2s5f8xakpcxmth?message=Donate)
 
-![Donation](https://github.com/HugoXOX3/PythonMiner/blob/main/Donate.jpeg)
+![Donation](https://github.com/HugoXOX3/PythonMiner/blob/main/Image/Donate.jpeg)
 
 ---
 Done & unpossible

@@ -4,10 +4,11 @@
 EZ Finder
 ---
 
-'line 231/108' Error
+'ret = bitcoin_miner(self)' or 'target = (ctx.nbits[2 :] + '00' * (int(ctx.nbits[:2] , 16) - 3)).zfill(64)'
+       ^^^^^^^^^^^^^^^^^^^                ~~~~~~~~~^^^^^
 
 ---
-Error 1
+'Line 231/108' Error
 ---
 ```
 PS C:\Users\user\Desktop\Other>  & 'c:\Users\user\AppData\Local\Programs\Python\Python312\python.exe' 'c:\Users\user\.vscode\extensions\ms-python.debugpy-2024.4.0-win32-x64\bundled\libs\debugpy\adapter/../..\debugpy\launcher' '51020' '--' 'C:\Users\user\Desktop\Other\SoloMiner.py'

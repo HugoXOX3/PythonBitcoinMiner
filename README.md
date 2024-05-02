@@ -162,7 +162,7 @@ Like:
 Comming Soon
 ---
 
-*Pefromance for better.
+*Pefromance be better.
 
 ---
 Warning

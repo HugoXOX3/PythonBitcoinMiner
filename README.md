@@ -180,6 +180,12 @@ That for all.If you want to view your stats of miner you can go to [solo.ckpool.
 ![Donation](https://github.com/HugoXOX3/PythonMiner/blob/main/Image/Donate.jpeg)
 
 ---
+Contact me
+---
+
+[Telegrame](t.me/iamnotniko)
+
+---
 Done & unpossible
 ---
 

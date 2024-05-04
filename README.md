@@ -87,7 +87,12 @@ Example:
 ![Windows example](https://github.com/HugoXOX3/PythonMiner/blob/main/Image/Windows%20Version.png)
 
 
-# For Hide Console Version
+# For Hide Console Version(Stop update)
+---
+Latest release
+---
+[Python BTC Solo Miner v1.2.3](https://github.com/HugoXOX3/PythonMiner/releases/tag/Minerv1.2.3)
+
 ---
 Requriment
 ---

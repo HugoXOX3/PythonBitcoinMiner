@@ -12,6 +12,8 @@ Keep upgrading
 
 Solo project
 
+A part of code is base on [BitcoinSoloPy](https://github.com/DaCryptoRaccoon/BitcoinSoloPy) and [SoloMinerV2](https://github.com/Pymmdrza/SoloMinerV2)
+
 ---
 Pool Setting
 ---

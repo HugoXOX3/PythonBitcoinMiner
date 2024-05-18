@@ -15,16 +15,6 @@ Solo project
 A part of code is base on [BitcoinSoloPy](https://github.com/DaCryptoRaccoon/BitcoinSoloPy) and [SoloMinerV2](https://github.com/Pymmdrza/SoloMinerV2)
 
 ---
-Pool Setting
----
-
-Deafult Pool is [Ckpool](https://solo.ckpool.org)
-
-Can Customise Solo Miner Pool(Still recommend ckpool Cuz it has the highest compatibility)
-
-Password is 'x' cuz most pool didnt have passwd or ignore it
-
----
 Error Occur?
 ---
 

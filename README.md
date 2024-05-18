@@ -46,7 +46,7 @@ First,Download the latest miner from [release(Windows.zip/Other.zip/Hide_consoel
 [UNIX](https://github.com/HugoXOX3/PythonMiner/blob/main/UNIX.md)
 
 
-# For Normal Version(Windows.zip/Other.zip)
+# For Normal Version(Windows.zip/Other.zip)(Stop update)
 
 
 ---
@@ -134,6 +134,22 @@ Then,you need to type to install requirement
 pip3 install tqdm tabulate requests colorama
 ```
 
+Also you need to change the wallet in this programme to yours by using nano or vim
+```
+# Python Bitcoin Solo Miner
+import requests
+import socket
+.
+.
+.
+
+## Mining Address **Change Me**
+address = 'Change this to your wallet'
+pool = 'stratum.solomining.io'
+port = 7777
+```
+
+
 After that,You can run the programe like:
 ```
 python3 SoloMiner.py
@@ -155,8 +171,28 @@ apk add py3-psutil
 git clone https://github.com/HugoXOX3/PythonMiner.git
 pip3 install tqdm tabulate requests colorama
 cd PythonMiner
+```
+
+Also you need to change the wallet in this programme to yours by using nano or vim
+```
+# Python Bitcoin Solo Miner
+import requests
+import socket
+.
+.
+.
+
+## Mining Address **Change Me**
+address = 'Change this to your wallet'
+pool = 'stratum.solomining.io'
+port = 7777
+```
+
+After that type this to run miner 
+```
 python3 SoloMiner.py
 ```
+
 Finally,type in your Bitcoin Address and Enjoy mining
 
 Like:

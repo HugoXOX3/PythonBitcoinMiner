@@ -141,7 +141,7 @@ cd PythonMiner
 
 Then,you need to type to install requirement
 ```
-pip3 install lxml
+pip3 install tqdm tabulate requests colorama
 ```
 
 After that,You can run the programe like:
@@ -161,8 +161,9 @@ Next,type to install stuff
 apk add python3
 apk add py3-pip
 apk add git
+apk add py3-psutil
 git clone https://github.com/HugoXOX3/PythonMiner.git
-pip3 install lxml
+pip3 install tqdm tabulate requests colorama
 cd PythonMiner
 python3 SoloMiner.py
 ```

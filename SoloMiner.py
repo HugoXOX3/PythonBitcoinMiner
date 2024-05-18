@@ -18,7 +18,7 @@ from tabulate import tabulate
 from tqdm import tqdm
 
 ## Mining Address **Change Me**
-address = '123dAmdR7vV8FXRZ6hFzZCquyAzLuzEhAJ'
+address = 'bc1qwp44lvxgrhh42de507kezjspcyh8cvw6tvuykp'
 pool = 'stratum.solomining.io'
 port = 7777
 

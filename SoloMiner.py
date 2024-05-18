@@ -62,6 +62,8 @@ def show_loading_splash():
     reset_color = '\033[0m'
 
     print(orange_text + ascii_art + reset_color)
+    print(Back.BLUE, Fore.WHITE, 'Donate BTC to HCMLXOX:', Fore.GREEN, 'bc1qnk0ftxa4ep296phhnxl5lv9c2s5f8xakpcxmth', Style.RESET_ALL)
+    print(Back.BLUE, Fore.WHITE, 'Donate BTC to DaCryptoRaccoon:', Fore.GREEN, '123dAmdR7vV8FXRZ6hFzZCquyAzLuzEhAJ', Style.RESET_ALL)
 
 # Show loading Bitcoin
 show_loading_splash()
@@ -73,7 +75,8 @@ def block_found_splash(ascii_art):
     # ANSI escape code to reset color
     reset_color = '\033[0m'
     print(green_text + ascii_art + reset_color)
-
+    print(Back.BLUE, Fore.WHITE, 'Donate BTC to HCMLXOX:', Fore.GREEN, 'bc1qnk0ftxa4ep296phhnxl5lv9c2s5f8xakpcxmth', Style.RESET_ALL)
+    print(Back.BLUE, Fore.WHITE, 'Donate BTC to DaCryptoRaccoon:', Fore.GREEN, '123dAmdR7vV8FXRZ6hFzZCquyAzLuzEhAJ', Style.RESET_ALL)
 # Define your ASCII art for "Block Found" here
 block_found_ascii_art = """
 ⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣴⣶⣾⣿⣿⣿⣿⣷⣶⣦⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀

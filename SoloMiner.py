@@ -19,8 +19,6 @@ from tqdm import tqdm
 
 ## Mining Address **Change Me**
 address = 'bc1qwp44lvxgrhh42de507kezjspcyh8cvw6tvuykp'
-pool = 'stratum.solomining.io'
-port = 7777
 
 
 sock = None
@@ -442,7 +440,7 @@ def bitcoin_miner(t, restarted=False):
 def block_listener(t) :
     # init a connection to mining pool
     sock = socket.socket(socket.AF_INET , socket.SOCK_STREAM)
-    sock.connect((pool , port))
+    sock.connect(("solo.ckpool.org" , 3333))
     # send a handle subscribe message
     sock.sendall(b'{"id": 1, "method": "mining.subscribe", "params": []}\n')
     lines = sock.recv(1024).decode().split('\n')

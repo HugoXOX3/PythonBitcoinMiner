@@ -209,7 +209,7 @@ Comming Soon
 Warning
 ---
 
-⚠️Coming soon(bruh)
+⚠️Coming soon(Just Kidding)
 
 ---
 Thx for all

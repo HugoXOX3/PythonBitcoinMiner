@@ -36,7 +36,7 @@ First,Download the latest miner from [release](https://github.com/HugoXOX3/BTCSo
 
 # Mining BTC with
 
-[Windows/Linux](https://github.com/HugoXOX3/PythonMiner#for-normal-versionwindowszipnormalzip)
+[Windows/Linux/Mac](https://github.com/HugoXOX3/PythonMiner#for-normal-versionwindowszipnormalzip)
 
 [Hide Console Version](https://github.com/HugoXOX3/PythonMiner#for-hide-console-version)
 
@@ -45,7 +45,7 @@ First,Download the latest miner from [release](https://github.com/HugoXOX3/BTCSo
 [UNIX](https://github.com/HugoXOX3/PythonMiner/blob/main/UNIX.md)
 
 
-# For Windows and Linux
+# For Windows  Linux  Mac
 
 # How to use
 

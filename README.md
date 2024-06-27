@@ -45,55 +45,52 @@ First,Download the latest miner from [release](https://github.com/HugoXOX3/BTCSo
 [UNIX](https://github.com/HugoXOX3/PythonMiner/blob/main/UNIX.md)
 
 
-# For Normal Version(Windows.zip/Other.zip)
+# For Windows and Linux
 
+# How to use
 
----
-To install requirement with pip
----
-Next,If you are windows user than run :
+1. install the require pip
 ```
-build.bat
-```
-Linux and Mac user run :
-```
-bash build.sh
-```
----
-Run programme
----
-Then,run "SoloMiner.exe" for windows user:
-```
-SoloMiner.exe
+pip3 install hashlib psutil colorama tabulate tqdm
 ```
 
-Linux and Mac user run:
+2. Change the setting into your favourite
 ```
-python Solominer.py
+#Setting
+# Mining Address **Change Me**
+address = 'bc1qwp44lvxgrhh42de507kezjspcyh8cvw6tvuykp'
+# Mining Pool
+pool = "solo.ckpool.org"
+port = 3333
 ```
-After that,input your btc address in cmd or terminal.
 
-Example:
+3. run the programme like:
+```
+python3 SoloMiner.py
+```
+
 
 ![Windows example](https://github.com/HugoXOX3/PythonMiner/blob/main/Image/Windows%20Version.png)
 
 
-# For Hide Console Version(Stop update)
+# For Hide Console Version
 
----
-Requriment
----
+1. install the require pip
+```
+pip3 install hashlib psutil colorama tabulate tqdm
+```
 
-Remeber to install python3,pip3,and lxml like normal
+2. Change the setting into your favourite
+```
+#Setting
+# Mining Address **Change Me**
+address = 'bc1qwp44lvxgrhh42de507kezjspcyh8cvw6tvuykp'
+# Mining Pool
+pool = "solo.ckpool.org"
+port = 3333
+```
 
----
-Change the address in main.pyw
----
-Using VIM,NANO or other IDLE to change my wallet'bc1qnk0ftxa4ep296phhnxl5lv9c2s5f8xakpcxmth' to yours btc address.
-
----
-Run programme
----
+3. Run programme
 
 Double click 'main.pyw' to start programme or type in terminal/cmd like :
 ```
@@ -126,7 +123,7 @@ cd PythonMiner
 
 Then,you need to type to install requirement
 ```
-pip3 install tqdm tabulate requests colorama
+pip3 install hashlib psutil colorama tabulate tqdm
 ```
 
 Also you need to change the wallet in this programme to yours by using nano or vim

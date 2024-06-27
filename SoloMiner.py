@@ -17,11 +17,18 @@ from colorama import Back, Fore, Style
 from tabulate import tabulate
 from tqdm import tqdm
 
+#Setting
+# Mining Address **Change Me**
+address = 'bc1qwp44lvxgrhh42de507kezjspcyh8cvw6tvuykp'
+# Mining Pool
+pool = "solo.ckpool.org"
+port = 3333
+
 sock = None
 best_difficulty = 0
 best_hash = None
 # Initialize difficulty outside the loop
-difficulty = 0
+difficulty = 16
 
 # Initialize best share difficulty and hash
 best_share_difficulty = float('inf')
@@ -92,9 +99,8 @@ block_found_ascii_art = """
 def timer():
     return datetime.now().time()
 
-## Mining Address **Change Me**
-address = 'bc1qwp44lvxgrhh42de507kezjspcyh8cvw6tvuykp'
-print(Back.BLUE, Fore.WHITE, 'SOLO ADDRESS:', Fore.GREEN, str(address), Style.RESET_ALL)
+print(Back.BLUE, Fore.WHITE, 'BTC ADDRESS:', Fore.GREEN, str(address), Style.RESET_ALL)
+print(Back.BLUE, Fore.WHITE, 'Donate BTC to HCMLXOX?:', Fore.GREEN, "bc1qnk0ftxa4ep296phhnxl5lv9c2s5f8xakpcxmth", Style.RESET_ALL)
 
 def handler(signal_received, frame):
     ctx.fShutdown = True
@@ -178,7 +184,7 @@ class ExitedThread(threading.Thread):
  ## it will set the miner thread to be running, call the mining method on the miner thread, and set the miner thread to be not running.
  ## If an exception occurs, it is logged and the traceback is printed, and the loop breaks.
 # Initialize best difficulty outside the loop
-best_difficulty = 0  # Add this line to initialize best_difficulty
+best_difficulty = 16  # Add this line to initialize best_difficulty
 
 def bitcoin_miner(t, restarted=False):
     global best_share_difficulty, best_share_hash
@@ -193,7 +199,7 @@ def bitcoin_miner(t, restarted=False):
     share_difficulty = 0
 
     # Initialize difficulty outside the loop
-    difficulty = 0
+    difficulty = 16
 
     # Initialize best difficulty
     best_difficulty = 0  # Add this line to initialize best_difficulty
@@ -434,7 +440,7 @@ def bitcoin_miner(t, restarted=False):
 def block_listener(t) :
     # init a connection to ckpool
     sock = socket.socket(socket.AF_INET , socket.SOCK_STREAM)
-    sock.connect(('solo.ckpool.org' , 3333))
+    sock.connect((pool , port))
     # send a handle subscribe message
     sock.sendall(b'{"id": 1, "method": "mining.subscribe", "params": []}\n')
     lines = sock.recv(1024).decode().split('\n')
@@ -561,17 +567,16 @@ class NewSubscribeThread(ExitedThread) :
 def StartMining() :
     subscribe_t = NewSubscribeThread(None)
     subscribe_t.start()
-    logg("[*] Subscribe thread started.")
-    print(Fore.MAGENTA , "[" , timer() , "]" , Fore.GREEN , "[*] Subscribe thread started.")
-
-    time.sleep(1)
-
-    miner_t = CoinMinerThread(None)
-    miner_t.start()
     logg("[*]£££ Bitcoin Solo Miner Started £££")
-    print(Fore.MAGENTA , "[" , timer() , '(', Fore.GREEN  , 'SOLO MINER STARTED' , Fore.BLUE , ' )~~--------------')
+    print(Fore.BLUE , '--------------~~( ' , Fore.GREEN  , 'SOLO MINER STARTED' , Fore.BLUE , ' )~~--------------')
     print(Fore.BLUE , '--------------~~( ' , Fore.YELLOW , 'IN SATOSHI WE TRUST' , Fore.BLUE , ' )~~--------------')
     print(Fore.BLUE , '--------------~~( ' , Fore.GREEN  , 'DO NOT TRUST VERIFY' , Fore.BLUE , ' )~~--------------')
+    time.sleep(2)
+    logg("[*] Subscribe thread started.")
+    print(Fore.MAGENTA , "[" , timer() , "]" , Fore.GREEN , "[*] Subscribe thread started.")
+    miner_t = CoinMinerThread(None)
+    miner_t.start()
+    time.sleep(1)
 
 
 if __name__ == '__main__':

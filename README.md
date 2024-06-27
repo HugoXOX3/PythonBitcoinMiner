@@ -12,7 +12,6 @@ Keep upgrading
 
 Solo project
 
-A part of code is base on [BitcoinSoloPy](https://github.com/DaCryptoRaccoon/BitcoinSoloPy) and [SoloMinerV2](https://github.com/Pymmdrza/SoloMinerV2)
 
 ---
 Error Occur?
@@ -225,6 +224,14 @@ Contact me
 ---
 
 [Telegrame](https://t.me/iamnotniko)
+
+---
+Credits
+---
+
+[BitcoinSoloPy](https://github.com/DaCryptoRaccoon/BitcoinSoloPy)
+
+[SoloMinerV2](https://github.com/Pymmdrza/SoloMinerV2)
 
 ---
 Done

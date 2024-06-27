@@ -19,6 +19,12 @@ Error Occur?
 
 [Go to here](https://github.com/HugoXOX3/PythonMiner/blob/main/FixBug.md) to find out the reason and fix it.
 
+
+---
+Ask for help?
+---
+[Go to here](https://github.com/HugoXOX3/PythonMiner/discussions)
+
 ---
 Requirement
 ---

@@ -32,7 +32,7 @@ Create your own Bitcoin Address:[Bitcoin Core](https://bitcoin.org/en/bitcoin-co
 Download the relase
 ---
 
-First,Download the latest miner from [release(Windows.zip/Other.zip/Hide_consoele_version.zip)](https://github.com/HugoXOX3/BTCSoloMiner/releases)
+First,Download the latest miner from [release](https://github.com/HugoXOX3/BTCSoloMiner/releases)
 
 # Mining BTC with
 
@@ -45,7 +45,7 @@ First,Download the latest miner from [release(Windows.zip/Other.zip/Hide_consoel
 [UNIX](https://github.com/HugoXOX3/PythonMiner/blob/main/UNIX.md)
 
 
-# For Normal Version(Windows.zip/Other.zip)(Stop update)
+# For Normal Version(Windows.zip/Other.zip)
 
 
 ---
@@ -79,10 +79,6 @@ Example:
 
 
 # For Hide Console Version(Stop update)
----
-Latest release
----
-[Python BTC Solo Miner v1.3.1](https://github.com/HugoXOX3/PythonMiner/releases/tag/Minerv1.3.1)
 
 ---
 Requriment

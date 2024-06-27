@@ -83,7 +83,7 @@ Example:
 ---
 Latest release
 ---
-[Python BTC Solo Miner v1.3.1]((https://github.com/HugoXOX3/PythonMiner/releases/tag/Minerv1.3.1)
+[Python BTC Solo Miner v1.3.1](https://github.com/HugoXOX3/PythonMiner/releases/tag/Minerv1.3.1)
 
 ---
 Requriment

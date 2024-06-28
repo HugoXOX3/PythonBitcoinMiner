@@ -1,6 +1,3 @@
-# Python Bitcoin Solo Miner
-
-# Setting
 # Mining Address **Change Me**
 address = 'bc1qwp44lvxgrhh42de507kezjspcyh8cvw6tvuykp'
 # Mining Pool
@@ -570,8 +567,6 @@ def StartMining() :
     subscribe_t.start()
     logg("[*]£££ Bitcoin Solo Miner Started £££")
     print(Fore.BLUE , '--------------~~( ' , Fore.GREEN  , 'SOLO MINER STARTED' , Fore.BLUE , ' )~~--------------')
-    print(Fore.BLUE , '--------------~~( ' , Fore.YELLOW , 'IN SATOSHI WE TRUST' , Fore.BLUE , ' )~~--------------')
-    print(Fore.BLUE , '--------------~~( ' , Fore.GREEN  , 'DO NOT TRUST VERIFY' , Fore.BLUE , ' )~~--------------')
     time.sleep(4)
     logg("[*] Subscribe thread started.")
     print(Fore.MAGENTA , "[" , timer() , "]" , Fore.GREEN , "[*] Subscribe thread started.")

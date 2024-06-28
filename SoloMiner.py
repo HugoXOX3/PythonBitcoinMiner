@@ -1,6 +1,7 @@
+#Setting
 # Mining Address **Change Me**
 address = 'bc1qwp44lvxgrhh42de507kezjspcyh8cvw6tvuykp'
-# Mining Pool
+# Mining Pool **Consider Before Change**
 pool = "solo.ckpool.org"
 port = 3333
 
@@ -10,17 +11,13 @@ import threading
 import json
 import hashlib
 import binascii
-import logging
 import random
 import time
 import traceback
 import context as ctx
-import psutil
 from datetime import datetime
 from signal import SIGINT, signal
 from colorama import Back, Fore, Style
-from tabulate import tabulate
-from tqdm import tqdm
 
 sock = None
 best_difficulty = 0
@@ -52,7 +49,7 @@ def show_loading_splash():
 ⠀⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀⠀
 ⠀⠀⠀⠀⠀⠙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠋⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠻⠿⢿⣿⣿⣿⣿⡿⠿⠟⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀
-       WE ARE ALL SATOSHI
+          M I N I N G
          B I T C O I N
     """
     # ANSI escape code for orange text
@@ -104,16 +101,6 @@ def handler(signal_received, frame):
     ctx.fShutdown = True
     print(Fore.MAGENTA, '[', timer(), ']', Fore.YELLOW, 'Force Close, Please Wait..')
 
-
-# Define the logger with the desired format
-logging.basicConfig(level=logging.INFO, filename="miner.log", format='%(asctime)s %(message)s')
-logger = logging.getLogger("miner_logger")
-
-# Update the logg function to use the logger
-def logg(msg):
-    logger.info(msg)
-
-
  ## This code is used to get the current block height of the Bitcoin network.
  ## The request is made to the blockchain.info API and the response is parsed to get the height field.
  ## The height is then converted to an integer and returned.
@@ -158,9 +145,7 @@ class ExitedThread(threading.Thread):
             try:
                 self.thread_handler2(arg)
             except Exception as e:
-                logg("ThreadHandler()")
                 print(Fore.MAGENTA, '[', timer(), ']', Fore.WHITE, 'ThreadHandler()')
-                logg(str(e))
                 print(Fore.GREEN, str(e))
             ctx.listfThreadRunning[n] = False
             time.sleep(2)
@@ -180,7 +165,6 @@ class ExitedThread(threading.Thread):
  ## It will then log and print that the miner has started. It then runs a loop which checks if the miner thread is still alive and if the subscribe thread is running.
  ## If either of these conditions are not true, the loop will break. Otherwise,
  ## it will set the miner thread to be running, call the mining method on the miner thread, and set the miner thread to be not running.
- ## If an exception occurs, it is logged and the traceback is printed, and the loop breaks.
 # Initialize best difficulty outside the loop
 best_difficulty = 16  # Add this line to initialize best_difficulty
 
@@ -189,7 +173,6 @@ def bitcoin_miner(t, restarted=False):
     start_time = time.time()  # Start time for performance metrics
     total_hashes = 0  # Initialize total_hashes
     if restarted:
-        logg('\n[*] Bitcoin Miner restarted')
         print(Fore.MAGENTA, '[', timer(), ']', Fore.YELLOW, 'Solo Miner Active')
         print(Fore.MAGENTA, '[', timer(), ']', Fore.BLUE, '[*] Bitcoin Miner Restarted')
 
@@ -246,7 +229,6 @@ def bitcoin_miner(t, restarted=False):
 
     # Print and log the difficulty value
     print(Fore.YELLOW, '[*] Diff:', Fore.YELLOW, '[', int(_diff), ']')
-    logg('[*] Working to solve block at block height {}'.format(work_on + 1))
     print(Fore.MAGENTA, '[', timer(), ']', Fore.YELLOW, '[*] Working to solve block at ', Fore.GREEN, 'height {}'.format(work_on + 1))
     
 
@@ -256,7 +238,6 @@ def bitcoin_miner(t, restarted=False):
         target_int = int(target, 16)
         return target_int / max(hash_int, 1)  # Avoid division by zero
 
-    # Enhanced metrics logging
     def log_metrics(start_time, nonce, hashes_computed, best_difficulty, best_hash):
         elapsed_time = time.time() - start_time
         hash_rate = hashes_computed / max(elapsed_time, 1)  # Avoid division by zero
@@ -274,7 +255,6 @@ def bitcoin_miner(t, restarted=False):
         # Initialize hash_rate
         hash_rate = 0.0
 
-    ## Modify bitcoin_miner function to include improved difficulty analysis and metrics logging
     ## This code is a while loop which checks if the thread should be shut down and if so, it breaks out of the loop.
     ## It then checks if a new block has been detected and if so, it logs and prints that a new block has been detected,
     ## logs and prints the difficulty of the block, restarts the bitcoin miner, and continues the loop.
@@ -284,10 +264,8 @@ def bitcoin_miner(t, restarted=False):
             break
 
         if ctx.prevhash != ctx.updatedPrevHash:
-            logg('[*] NEW BLOCK {} DETECTED ON NETWORK'.format(ctx.prevhash))
             print(Fore.YELLOW, '[', timer(), ']', Fore.MAGENTA, '[*] New block {} detected on', Fore.BLUE,
                   ' network '.format(ctx.prevhash))
-            logg('[*] Best difficulty previous block {} was {}'.format(work_on + 1, ctx.nHeightDiff[work_on + 1]))
             print(Fore.MAGENTA, '[', timer(), ']', Fore.GREEN, '[*] Best Diff Trying Block', Fore.YELLOW, ' {} ',
                   Fore.BLUE, 'was {}'.format(work_on + 1, ctx.nHeightDiff[work_on + 1]))
             ctx.updatedPrevHash = ctx.prevhash
@@ -324,7 +302,6 @@ def bitcoin_miner(t, restarted=False):
 
         # Check if the current hash meets or exceeds the target difficulty
         if this_hash <= int(target_difficulty, 16):
-            logg(f'[*] New hash: {hash} for block {work_on + 1}')
             print(Fore.MAGENTA, '[', timer(), ']', Fore.GREEN, f'[*] New hash: {hash} for block', Fore.YELLOW, work_on + 1)
             print(Fore.MAGENTA, '[', timer(), ']', Fore.YELLOW, 'Hash:', hash.format(work_on + 1))
 
@@ -340,7 +317,6 @@ def bitcoin_miner(t, restarted=False):
         if difficulty > best_difficulty:
             best_difficulty = difficulty
             best_hash = hash
-            logg(f'[BEST HASH UPDATE] New best hash: {best_hash} with difficulty: {best_difficulty}')
             print(f'[BEST HASH UPDATE] New best hash: {best_hash} with difficulty: {best_difficulty}')
 
         # Update the difficulty for the current block in the context
@@ -363,29 +339,24 @@ def bitcoin_miner(t, restarted=False):
             ## If the hash is less than the target, it means the block has been successfully solved and the ctx.solved flag is set to True.
 
         if hash < target:
-            logg('[*] Share found for block {}.'.format(work_on + 1))
             print(Fore.MAGENTA, '[', timer(), ']', Fore.YELLOW, '[*] Share found for block {}.'.format(work_on + 1))
             print(Fore.MAGENTA, '[', timer(), ']', Fore.YELLOW, 'Share:', hash.format(work_on + 1))
-            logg('[*] Block hash: {}'.format(hash))
             print(Fore.YELLOW)
             print(Fore.MAGENTA, '[', timer(), ']', Fore.YELLOW, '[*] Block hash: {}'.format(hash))
-            logg('[*] Blockheader: {}'.format(blockheader))
             print(Fore.BLUE, '--------------~~( ', Fore.GREEN, 'BLOCK SOLVED CHECK WALLET!', Fore.ORANGE, ' )~~--------------')
             print(Fore.YELLOW, '[*] Blockheader: {}'.format(blockheader))
 
             # Print nonce value when a new share is found
-            logg('[*] Nonce Value: {}'.format(nonce))
             print(Fore.YELLOW, '[*] Nonce Value: {}'.format(nonce))
-
             payload = bytes('{"params": ["' + address + '", "' + ctx.job_id + '", "' + ctx.extranonce2 + '", "' + ctx.ntime + '", "' + nonce + '"], "id": 1, "method": "mining.submit"}\n', 'utf-8')
-            logg('[*] Payload: {}'.format(payload))
             print(Fore.MAGENTA, '[', timer(), ']', Fore.BLUE, '[*] Payload:', Fore.GREEN, ' {}'.format(payload))
             sock.sendall(payload)
             ret = sock.recv(1024)
-            logg('[*] Pool response: {}'.format(ret))
             print(Fore.MAGENTA, '[', timer(), ']', Fore.GREEN, '[*] Pool Response:', Fore.CYAN, ' {}'.format(ret))
             print(payload)
             block_found_splash(block_found_ascii_art)
+            time.sleep(1)
+            print(Back.BLUE, Fore.WHITE, 'Donate BTC to HCMLXOX?:', Fore.GREEN, "bc1qnk0ftxa4ep296phhnxl5lv9c2s5f8xakpcxmth", Style.RESET_ALL)
             return True
 
         if difficulty >= 16:
@@ -404,7 +375,6 @@ def bitcoin_miner(t, restarted=False):
             response = sock.recv(1024).decode()
             
             # Log and print the response for monitoring purposes
-            logg('[*] Pool response for share submission: {}'.format(response))
             print(Fore.MAGENTA, '[', timer(), ']', Fore.GREEN, '[*] Pool Response for share submission:', Fore.CYAN, ' {}'.format(response))
 
             # Calculate the difficulty for the current share
@@ -414,7 +384,6 @@ def bitcoin_miner(t, restarted=False):
         if share_difficulty < best_share_difficulty:
             best_share_difficulty = share_difficulty
             best_share_hash = hash
-            logg(f'[BEST SHARE UPDATE] New best share hash: {best_share_hash} with difficulty: {best_share_difficulty}')
             print(f'[BEST SHARE UPDATE] New best share hash: {best_share_hash} with difficulty: {best_share_difficulty}')
 
         # Update the difficulty for the current block in the context
@@ -448,7 +417,6 @@ def block_listener(t) :
     sock.sendall(b'{"params": ["' + address.encode() + b'", "x"], "id": 2, "method": "mining.authorize"}\n')
     response = b''
     while response.count(b'\n') < 4 and not (b'mining.notify' in response) : response += sock.recv(1024)
-    print(response)
 
     ## This code is used to parse the response from the ckpool server and get the necessary fields for the mining context (ctx).
     ## The response is split into individual lines and only lines that contain the 'mining.notify' string are parsed.
@@ -489,22 +457,9 @@ def block_listener(t) :
             # Call the splash screen function here
             show_loading_splash()
 
-            # Log the new mining context
-            logger.info(f"New Work Received from Pool:\n"
-                         f"Job ID: {ctx.job_id}\n"
-                         f"Previous Block Hash: {ctx.prevhash}\n"
-                         f"Coinbase 1: {ctx.coinb1}\n"
-                         f"Coinbase 2: {ctx.coinb2}\n"
-                         f"Merkle Branch: {ctx.merkle_branch}\n"
-                         f"Version: {ctx.version}\n"
-                         f"nBits: {ctx.nbits}\n"
-                         f"nTime: {ctx.ntime}\n"
-                         f"Clean Jobs: {ctx.clean_jobs}")
-
     ## This code is defining a custom thread class called CoinMinerThread which is a subclass of ExitedThread.
     ## The class has two methods, __init__ and thread_handler2. The __init__ method is used to initialize the class and set the n attribute to 0.
     ## The thread_handler2 method calls the thread_bitcoin_miner method with the arg parameter. The thread_bitcoin_miner method is used to check for shutdown,
-    ## and then calls the bitcoin_miner function with the current thread object as the parameter. The result of the bitcoin_miner function is logged to the console.
 
 class CoinMinerThread(ExitedThread) :
     def __init__(self , arg = None) :
@@ -518,12 +473,9 @@ class CoinMinerThread(ExitedThread) :
         check_for_shutdown(self)
         try :
             ret = bitcoin_miner(self)
-            logg(Fore.MAGENTA , "[" , timer() , "] [*] Miner returned %s\n\n" % "true" if ret else "false")
             print(Fore.LIGHTCYAN_EX , "[*] Miner returned %s\n\n" % "true" if ret else "false")
         except Exception as e :
-            logg("[*] Miner()")
             print(Back.WHITE , Fore.MAGENTA , "[" , timer() , "]" , Fore.BLUE , "[*] Miner()")
-            logg(e)
             traceback.print_exc()
         ctx.listfThreadRunning[self.n] = False
 
@@ -533,7 +485,6 @@ class CoinMinerThread(ExitedThread) :
     ## __init__ and thread_handler2. The __init__ method sets up the thread with the specified argument and sets the number of threads to 1.
     ## The thread_handler2 method calls the thread_new_block method with the specified argument.
     ## The thread_new_block method sets the thread to be running, checks for shutdown, and then calls the block_listener function. If an exception occurs,
-    ## it is logged and the traceback is printed. Finally, the thread is set to be not running.
 
 class NewSubscribeThread(ExitedThread) :
     def __init__(self , arg = None) :
@@ -548,9 +499,7 @@ class NewSubscribeThread(ExitedThread) :
         try :
             ret = block_listener(self)
         except Exception as e :
-            logg("[*] Subscribe thread()")
             print(Fore.MAGENTA , "[" , timer() , "]" , Fore.YELLOW , "[*] Subscribe thread()")
-            logg(e)
             traceback.print_exc()
         ctx.listfThreadRunning[self.n] = False
 
@@ -565,20 +514,14 @@ class NewSubscribeThread(ExitedThread) :
 def StartMining() :
     subscribe_t = NewSubscribeThread(None)
     subscribe_t.start()
-    logg("[*]£££ Bitcoin Solo Miner Started £££")
-    print(Fore.BLUE , '--------------~~( ' , Fore.GREEN  , 'SOLO MINER STARTED' , Fore.BLUE , ' )~~--------------')
     time.sleep(4)
-    logg("[*] Subscribe thread started.")
     print(Fore.MAGENTA , "[" , timer() , "]" , Fore.GREEN , "[*] Subscribe thread started.")
     miner_t = CoinMinerThread(None)
     miner_t.start()
-    time.sleep(1)
-
 
 if __name__ == '__main__':
     # Initialize performance metrics in context
     ctx.total_hashes_computed = 0
     ctx.mining_time_per_block = []
-
     signal(SIGINT, handler)
     StartMining()

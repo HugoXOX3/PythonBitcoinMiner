@@ -30,13 +30,12 @@ Traceback (most recent call last):
               ~~~~~~~~~^^^^^
 TypeError: 'NoneType' object is not subscriptable
 ```
-Image:
-
-![Error1](https://github.com/HugoXOX3/PythonMiner/blob/main/Image/Error1.png)
 
 Reason:
 
 1.Type in wrong mining pool host,check it again.
 
 2.Mining Pool not support in your country.Try to use a VPN or Proxy.
+
+3.Give it more time to connect
 

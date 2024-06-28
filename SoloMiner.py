@@ -571,7 +571,7 @@ def StartMining() :
     print(Fore.BLUE , '--------------~~( ' , Fore.GREEN  , 'SOLO MINER STARTED' , Fore.BLUE , ' )~~--------------')
     print(Fore.BLUE , '--------------~~( ' , Fore.YELLOW , 'IN SATOSHI WE TRUST' , Fore.BLUE , ' )~~--------------')
     print(Fore.BLUE , '--------------~~( ' , Fore.GREEN  , 'DO NOT TRUST VERIFY' , Fore.BLUE , ' )~~--------------')
-    time.sleep(2)
+    time.sleep(4)
     logg("[*] Subscribe thread started.")
     print(Fore.MAGENTA , "[" , timer() , "]" , Fore.GREEN , "[*] Subscribe thread started.")
     miner_t = CoinMinerThread(None)

@@ -1,4 +1,12 @@
 # Python Bitcoin Solo Miner
+
+# Setting
+# Mining Address **Change Me**
+address = 'bc1qwp44lvxgrhh42de507kezjspcyh8cvw6tvuykp'
+# Mining Pool
+pool = "solo.ckpool.org"
+port = 3333
+
 import requests
 import socket
 import threading
@@ -16,13 +24,6 @@ from signal import SIGINT, signal
 from colorama import Back, Fore, Style
 from tabulate import tabulate
 from tqdm import tqdm
-
-#Setting
-# Mining Address **Change Me**
-address = 'bc1qwp44lvxgrhh42de507kezjspcyh8cvw6tvuykp'
-# Mining Pool
-pool = "solo.ckpool.org"
-port = 3333
 
 sock = None
 best_difficulty = 0

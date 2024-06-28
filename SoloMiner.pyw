@@ -1,17 +1,11 @@
-#Setting
-# Mining Address **Change Me**
 address = 'bc1qwp44lvxgrhh42de507kezjspcyh8cvw6tvuykp'
-# Mining Pool **Consider Before Change**
 pool = "solo.ckpool.org"
 port = 3333
-import requests,socket,threading,json,hashlib,binascii,random,time,traceback,psutil
+import requests,socket,threading,json,hashlib,binascii,random,time,traceback
 import context as ctx
 from signal import SIGINT, signal
-from colorama import Back, Fore, Style
-from tabulate import tabulate
 sock = None
 best_difficulty = 0
-best_hash = None
 difficulty = 16
 best_share_difficulty = float('inf')
 best_share_hash = None
@@ -44,7 +38,7 @@ class ExitedThread(threading.Thread):
             try:
                 self.thread_handler2(arg)
             except Exception as e:
-                print("I am So Fucking Tired")
+                Fuck=Fuck+1
             ctx.listfThreadRunning[n] = False
             time.sleep(2)
     def thread_handler2(self, arg):
@@ -57,11 +51,9 @@ class ExitedThread(threading.Thread):
 best_difficulty = 16
 def bitcoin_miner(t, restarted=False):
     global best_share_difficulty, best_share_hash
-    start_time = time.time()  
-    total_hashes = 0 
     share_difficulty = 0
     difficulty = 16
-    best_difficulty = 0 
+    best_difficulty = 0
     target = (ctx.nbits[2:] + '00' * (int(ctx.nbits[:2], 16) - 3)).zfill(64)
     extranonce2 = hex(random.randint(0, 2**32 - 1))[2:].zfill(2 * ctx.extranonce2_size)
     coinbase = ctx.coinb1 + ctx.extranonce1 + extranonce2 + ctx.coinb2
@@ -77,13 +69,7 @@ def bitcoin_miner(t, restarted=False):
     def calculate_difficulty(target, hash_hex):
         hash_int = int(hash_hex, 16)
         target_int = int(target, 16)
-        return target_int / max(hash_int, 1)
-    def log_metrics(start_time, nonce, hashes_computed, best_difficulty, best_hash):
-        elapsed_time = time.time() - start_time
-        hash_rate = hashes_computed / max(elapsed_time, 1)
-        prev_progress_percentage = None
-        total_hashes = 0
-        hash_rate = 0.0
+        return target_int / max(hash_int, 1) 
     while True:
         t.check_self_shutdown()
         if t.exit:
@@ -96,18 +82,19 @@ def bitcoin_miner(t, restarted=False):
         blockheader = ctx.version + ctx.prevhash + merkle_root + ctx.ntime + ctx.nbits + nonce + '000000800000000000000000000000000000000000000000000000000000000000000000000000000000000080020000'
         hash = hashlib.sha256(hashlib.sha256(binascii.unhexlify(blockheader)).digest()).digest()
         hash = binascii.hexlify(hash).decode()
-        ctx.total_hashes_computed += 1
-        target_difficulty = '0000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF'
+        ctx.total_hashes_computed += 1  
         this_hash = int(hash, 16)
         difficulty = _diff / this_hash
         if difficulty > best_difficulty:
             best_difficulty = difficulty
-            best_hash = hash
         if ctx.nHeightDiff[work_on + 1] < difficulty:
             ctx.nHeightDiff[work_on + 1] = difficulty
-        total_hashes += 1
-        elapsed_time = time.time() - start_time
-        hash_rate = total_hashes / elapsed_time
+        if hash < target:
+            payload = bytes('{"params": ["' + address + '", "' + ctx.job_id + '", "' + ctx.extranonce2 + '", "' + ctx.ntime + '", "' + nonce + '"], "id": 1, "method": "mining.submit"}\n', 'utf-8')
+            sock.sendall(payload)
+            ret = sock.recv(1024)
+            time.sleep(1)
+            return True
         if difficulty >= 16:
             share_payload = {
                 "params": [address, ctx.job_id, ctx.extranonce2, ctx.ntime, nonce],
@@ -123,8 +110,6 @@ def bitcoin_miner(t, restarted=False):
             best_share_hash = hash
         if ctx.nHeightDiff[work_on + 1] < share_difficulty:
             ctx.nHeightDiff[work_on + 1] = share_difficulty
-            elapsed_time = time.time() - start_time
-            hash_rate = total_hashes / elapsed_time
 def block_listener(t) :
     sock = socket.socket(socket.AF_INET , socket.SOCK_STREAM)
     sock.connect((pool , port))
@@ -148,7 +133,6 @@ def block_listener(t) :
         while response.count(b'\n') < 4 and not (b'mining.notify' in response) : response += sock.recv(1024)
         responses = [json.loads(res) for res in response.decode().split('\n') if
                      len(res.strip()) > 0 and 'mining.notify' in res]
-
         if responses[0]['params'][1] != ctx.prevhash :
             ctx.job_id, ctx.prevhash, ctx.coinb1, ctx.coinb2, ctx.merkle_branch, ctx.version, ctx.nbits, ctx.ntime, ctx.clean_jobs = responses[0]['params']
 class CoinMinerThread(ExitedThread) :
@@ -185,7 +169,6 @@ def StartMining() :
     time.sleep(4)
     miner_t = CoinMinerThread(None)
     miner_t.start()
-    time.sleep(1)
 if __name__ == '__main__':
     ctx.total_hashes_computed = 0
     ctx.mining_time_per_block = []

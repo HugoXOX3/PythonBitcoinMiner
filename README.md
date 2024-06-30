@@ -57,7 +57,7 @@ First,Download the latest miner from [release](https://github.com/HugoXOX3/BTCSo
 
 1. install the require pip
 ```
-pip3 install hashlib psutil colorama tabulate tqdm
+pip3 install -r requirements.txt
 ```
 
 2. Change the setting into your favourite
@@ -83,7 +83,7 @@ python3 SoloMiner.py
 
 1. install the require pip
 ```
-pip3 install hashlib psutil colorama tabulate tqdm
+pip3 install -r requirements.txt
 ```
 
 2. Change the setting into your favourite
@@ -129,7 +129,7 @@ cd PythonMiner
 
 Then,you need to type to install requirement
 ```
-pip3 install hashlib psutil colorama tabulate tqdm
+pip3 install -r requirements.txt
 ```
 
 Also you need to change the wallet in this programme to yours by using nano or vim
@@ -167,7 +167,7 @@ apk add py3-pip
 apk add git
 apk add py3-psutil
 git clone https://github.com/HugoXOX3/PythonMiner.git
-pip3 install tqdm tabulate requests colorama
+pip3 install -r requirements.txt
 cd PythonMiner
 ```
 

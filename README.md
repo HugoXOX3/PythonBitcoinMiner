@@ -198,16 +198,10 @@ Like:
 ![example](https://github.com/HugoXOX3/PythonMiner/blob/main/Image/IOS.jpeg)
 
 ---
-Comming Soon
----
-
-*Pefromance be better.
-
----
 Warning
 ---
 
-⚠️Coming soon(Just Kidding)
+⚠️ Mining Bitcoin on a mobile device with a bad cooling may damage your device
 
 ---
 Thx for all

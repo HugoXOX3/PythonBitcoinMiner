@@ -127,12 +127,7 @@ git clone https://github.com/HugoXOX3/PythonMiner.git
 cd PythonMiner
 ```
 
-Then,you need to type to install requirement
-```
-pip3 install -r requirements.txt
-```
-
-Also you need to change the wallet in this programme to yours by using nano or vim
+Then,you need to change the wallet in this programme to yours by using nano or vim
 ```
 # Python Bitcoin Solo Miner
 import requests
@@ -165,10 +160,8 @@ Next,type to install stuff
 apk add python3
 apk add py3-pip
 apk add git
-apk add py3-psutil
 git clone https://github.com/HugoXOX3/PythonMiner.git
 cd PythonMiner
-pip3 install -r requirements.txt
 ```
 
 Also you need to change the wallet in this programme to yours by using nano or vim

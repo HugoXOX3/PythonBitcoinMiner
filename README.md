@@ -55,12 +55,7 @@ First,Download the latest miner from [release](https://github.com/HugoXOX3/BTCSo
 
 # How to use
 
-1. install the require pip
-```
-pip3 install -r requirements.txt
-```
-
-2. Change the setting into your favourite
+1. Change the setting 
 ```
 #Setting
 # Mining Address **Change Me**
@@ -70,7 +65,7 @@ pool = "solo.ckpool.org"
 port = 3333
 ```
 
-3. run the programme like:
+2. run the programme like:
 ```
 python3 SoloMiner.py
 ```

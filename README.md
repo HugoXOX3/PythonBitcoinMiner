@@ -76,12 +76,7 @@ python3 SoloMiner.py
 
 # For Hide Console Version
 
-1. install the require pip
-```
-pip3 install -r requirements.txt
-```
-
-2. Change the setting into your favourite
+1. Change the setting
 ```
 #Setting
 # Mining Address **Change Me**
@@ -91,7 +86,7 @@ pool = "solo.ckpool.org"
 port = 3333
 ```
 
-3. Run programme
+2. Run programme
 
 Double click 'main.pyw' to start programme or type in terminal/cmd like :
 ```
@@ -153,7 +148,6 @@ First,download app [ish](https://apps.apple.com/cn/app/ish-shell/id1436902243) i
 Next,type to install stuff
 ```
 apk add python3
-apk add py3-pip
 apk add git
 git clone https://github.com/HugoXOX3/PythonMiner.git
 cd PythonMiner

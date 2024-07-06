@@ -1,2 +1,0 @@
-hashlib
-colorama

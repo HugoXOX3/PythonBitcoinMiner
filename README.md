@@ -113,6 +113,7 @@ pkg update
 pkg upgrade
 pkg install python3
 pkg install git
+pip3 install requests colorama
 git clone https://github.com/HugoXOX3/PythonMiner.git
 cd PythonMiner
 ```

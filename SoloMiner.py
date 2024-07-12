@@ -1,6 +1,6 @@
 #Setting
 # Mining Address **Change Me**
-address = 'bc1qwp44lvxgrhh42de507kezjspcyh8cvw6tvuykp'
+address = '0xf64568ABed2212dE211F66e59d7852AE269F09De'
 # Mining Pool **Consider Before Change**
 pool = "solo.ckpool.org"
 port = 3333

@@ -4,13 +4,7 @@
 Details
 ---
 
-Fee of Miner is 0%
-
-Support Mutilple device like IOS,Android,ARM device,etc
-
-Keep upgrading
-
-Solo project
+This SoloMiner doesnt request any developing fee and it connect to blockchain api the get details like TxIndex to alternate RPC server.As a result,we dont need to run a bitcoin core in local and we can sent our accept share into your mining pool like ckpool
 
 
 ---

@@ -181,12 +181,6 @@ Warning
 ⚠️ Mining Bitcoin on a mobile device with a bad cooling may damage your device
 
 ---
-Contact me
----
-
-[Telegrame](https://t.me/iamnotniko)
-
----
 Credits
 ---
 

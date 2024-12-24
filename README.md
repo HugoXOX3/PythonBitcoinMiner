@@ -53,7 +53,7 @@ First,Download the latest miner from [release](https://github.com/HugoXOX3/BTCSo
 ```
 #Setting
 # Mining Address **Change Me**
-address = 'bc1qwp44lvxgrhh42de507kezjspcyh8cvw6tvuykp'
+address = 'xxx'
 # Mining Pool
 pool = "solo.ckpool.org"
 port = 3333
@@ -74,7 +74,7 @@ python3 SoloMiner.py
 ```
 #Setting
 # Mining Address **Change Me**
-address = 'bc1qwp44lvxgrhh42de507kezjspcyh8cvw6tvuykp'
+address = 'xxx'
 # Mining Pool
 pool = "solo.ckpool.org"
 port = 3333

@@ -4,8 +4,11 @@
 Updatest Version
 ---
 [Version Beta v2.0.0](https://github.com/HugoXOX3/PythonBitcoinMiner/releases/tag/Minerv2.0.0)
+
 It is still a debug version which fix all the bug in version v1.x.x.
+
 However,it may have some new bugs or errors.
+
 Please report it at [Issues](https://github.com/HugoXOX3/PythonBitcoinMiner/issues) to improve and fix the program.
 
 ---

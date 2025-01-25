@@ -4,27 +4,9 @@
 
 ## Latest Version
 
-[Version Beta v2.0.0](https://github.com/HugoXOX3/PythonBitcoinMiner/releases/tag/Minerv2.0.0)
-
-This is still a debug version which fixes all the bugs in version v1.x.x.
-
-However, it may have some new bugs or errors.
+[Version v2.0.0](https://github.com/HugoXOX3/PythonBitcoinMiner/releases)
 
 Please report any issues at [Issues](https://github.com/HugoXOX3/PythonBitcoinMiner/issues) to help improve and fix the program.
-
-## Bitcoin Solo Miner Version 1.x.x and Documentation
-
----
-
-## Details
-
-This SoloMiner does not request any development fee and connects to the blockchain API to get details like TxIndex to alternate RPC server. As a result, we do not need to run a Bitcoin core locally, and we can send our accepted shares to your mining pool like ckpool.
-
----
-
-## Error Occurred?
-
-[Go here](https://github.com/HugoXOX3/PythonMiner/blob/main/FixBug.md) to find out the reason and how to fix it.
 
 ---
 
@@ -187,16 +169,3 @@ The way to run this miner on Android and iOS is to run a Linux Terminal on them,
 ⚠️ Mining Bitcoin on a mobile device with poor cooling may damage your device.
 
 ---
-
-## Credits
-
-- [BitcoinSoloPy](https://github.com/DaCryptoRaccoon/BitcoinSoloPy)
-- [SoloMinerV2](https://github.com/Pymmdrza/SoloMinerV2)
-
----
-
-## Done
-
-- ✅ Mining with iOS (I already have some ideas to mine on it by using [iSH](https://github.com/ish-app/ish))
-- ✅ Save Address Function
-- ✅ Customize Solo Mining Pool (Bug Fix)

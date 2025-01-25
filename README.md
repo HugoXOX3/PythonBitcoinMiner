@@ -59,28 +59,6 @@ First, download the latest miner from [releases](https://github.com/HugoXOX3/BTC
 
 ![Windows example](https://github.com/HugoXOX3/PythonMiner/blob/main/Image/Windows%20Version.png)
 
-# For Hide Console Version
-
-1. Change the settings:
-   ```python
-   # Setting
-   # Mining Address **Change Me**
-   address = 'xxx'
-   # Mining Pool
-   pool = "solo.ckpool.org"
-   port = 3333
-   ```
-
-2. Run the program:
-
-Double-click `main.pyw` to start the program or type in terminal/cmd:
-   ```sh
-   main.pyw
-   ```
-You can confirm it is running in Task Manager (look for python.exe).
-
-Windows users can also drag this file into `shell:startup` so that mining will start automatically when the PC is on.
-
 # Android & iOS
 
 The way to run this miner on Android and iOS is to run a Linux Terminal on them, like Termux & iSH.

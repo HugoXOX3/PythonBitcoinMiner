@@ -44,12 +44,12 @@ First, download the latest miner from [releases](https://github.com/HugoXOX3/BTC
 
 1. Change the settings:
    ```python
-   # Setting
-   # Mining Address **Change Me**
-   address = 'xxx'
-   # Mining Pool
-   pool = "solo.ckpool.org"
-   port = 3333
+    pool_address = "public-pool.io"
+    pool_port = 21496
+    username = "Replace_Me_With_Your_BTC_Wallet"
+    password = "x"
+    min_diff = 0.01
+    ......
    ```
 
 2. Run the program:
@@ -75,24 +75,19 @@ The way to run this miner on Android and iOS is to run a Linux Terminal on them,
    pkg upgrade
    pkg install python3
    pkg install git
-   pip3 install requests colorama
+   pip3 install -r requirements.txt
    git clone https://github.com/HugoXOX3/PythonMiner.git
    cd PythonMiner
    ```
 
 3. Change the wallet in this program to yours using nano or vim:
    ```python
-   # Python Bitcoin Solo Miner
-   import requests
-   import socket
-   .
-   .
-   .
-
-   ## Mining Address **Change Me**
-   address = 'Change this to your wallet'
-   pool = 'stratum.solomining.io'
-   port = 7777
+    pool_address = "public-pool.io"
+    pool_port = 21496
+    username = "Replace_Me_With_Your_BTC_Wallet"
+    password = "x"
+    min_diff = 0.01
+    ......
    ```
 
 4. Run the program:
@@ -112,23 +107,20 @@ The way to run this miner on Android and iOS is to run a Linux Terminal on them,
    ```sh
    apk add python3
    apk add git
+   apk add py3-pip
+   pip3 install -r requirements.txt
    git clone https://github.com/HugoXOX3/PythonMiner.git
    cd PythonMiner
    ```
 
 3. Change the wallet in this program to yours using nano or vim:
    ```python
-   # Python Bitcoin Solo Miner
-   import requests
-   import socket
-   .
-   .
-   .
-
-   ## Mining Address **Change Me**
-   address = 'Change this to your wallet'
-   pool = 'stratum.solomining.io'
-   port = 7777
+    pool_address = "public-pool.io"
+    pool_port = 21496
+    username = "Replace_Me_With_Your_BTC_Wallet"
+    password = "x"
+    min_diff = 0.01
+    ......
    ```
 
 4. Run the miner:

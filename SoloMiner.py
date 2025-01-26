@@ -11,9 +11,6 @@ import struct
 import time
 import multiprocessing
 
-def sha256d(data):
-    return hashlib.sha256(hashlib.sha256(data).digest()).digest()
-
 def connect_to_pool(pool_address, pool_port, timeout=30, retries=5):
     for attempt in range(retries):
         try:
@@ -91,11 +88,11 @@ def mine_worker(job, target, extranonce1, extranonce2_size, nonce_start, nonce_e
 
     extranonce2 = struct.pack('<Q', 0)[:extranonce2_size]
     coinbase = (coinb1 + extranonce1 + extranonce2.hex() + coinb2).encode('utf-8')
-    coinbase_hash_bin = sha256d(coinbase)
+    coinbase_hash_bin = hashlib.sha256(hashlib.sha256(coinbase).digest()).digest()
     
     merkle_root = coinbase_hash_bin
     for branch in merkle_branch:
-        merkle_root = sha256d(merkle_root + bytes.fromhex(branch))
+        merkle_root = hashlib.sha256(hashlib.sha256((merkle_root + bytes.fromhex(branch))).digest()).digest()
 
     block_header = (version + prevhash + merkle_root[::-1].hex() + ntime + nbits).encode('utf-8')
     target_bin = bytes.fromhex(target)[::-1]
@@ -105,7 +102,7 @@ def mine_worker(job, target, extranonce1, extranonce2_size, nonce_start, nonce_e
             return
         
         nonce_bin = struct.pack('<I', nonce)
-        hash_result = sha256d(sha256d(block_header + nonce_bin))
+        hash_result = hashlib.sha256(hashlib.sha256(hashlib.sha256(hashlib.sha256(block_header + nonce_bin).digest()).digest()).digest()).digest()
 
         if hash_result[::-1] < target_bin:
             difficulty = calculate_difficulty(hash_result)

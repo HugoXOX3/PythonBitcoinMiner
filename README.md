@@ -34,9 +34,7 @@ First, download the latest miner from [releases](https://github.com/HugoXOX3/BTC
 # Mining BTC with
 
 - [Windows/Linux/Mac](https://github.com/HugoXOX3/PythonMiner#for-windows-linux-mac)
-- [Hide Console Version](https://github.com/HugoXOX3/PythonMiner#for-hide-console-version)
 - [Android & IOS](https://github.com/HugoXOX3/PythonMiner#androidios)
-- [UNIX](https://github.com/HugoXOX3/PythonMiner/blob/main/UNIX.md)
 
 # For Windows/Linux/Mac
 

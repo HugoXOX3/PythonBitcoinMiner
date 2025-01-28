@@ -1,8 +1,3 @@
-pool_address = "public-pool.io"
-pool_port = 21496
-username = "bc1qp84qrxsntmpyekp9vzdenlt8khnj0h4wqafeqe"
-password = "x"
-min_diff = 0.01
 
 import socket
 import json
@@ -10,6 +5,19 @@ import hashlib
 import struct
 import time
 import multiprocessing
+
+with open('config.json','r') as file:
+    config = json.load(file)
+
+pool_address = config['pool_address']
+pool_port = config["pool_port"]
+username = config["user_name"]
+password = config["passwowrd"]
+min_diff = config["min_diff"]
+
+"""
+{'pool_address': 'public-pool.io', 'pool_port': 21496, 'user_name': 'bc1qp84qrxsntmpyekp9vzdenlt8khnj0h4wqafeqe', 'passwowrd': 'x', 'min_diff': 0.01}
+"""
 
 def connect_to_pool(pool_address, pool_port, timeout=30, retries=5):
     for attempt in range(retries):
@@ -149,11 +157,6 @@ def submit_solution(sock, job_id, extranonce2, ntime, nonce):
                 return
 
 if __name__ == "__main__":
-    pool_address = "public-pool.io"
-    pool_port = 21496
-    username = "bc1qp84qrxsntmpyekp9vzdenlt8khnj0h4wqafeqe"
-    password = "x"
-
     if pool_address.startswith("stratum+tcp://"):
         pool_address = pool_address[len("stratum+tcp://"):]
 

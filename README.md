@@ -42,12 +42,13 @@ First, download the latest miner from [releases](https://github.com/HugoXOX3/BTC
 
 1. Change the settings:
    ```json
-    pool_address = "public-pool.io"
-    pool_port = 21496
-    username = "Replace_Me_With_Your_BTC_Wallet"
-    password = "x"
-    min_diff = 0.01
-    ......
+{
+ "pool_address":"public-pool.io",
+ "pool_port": 21496,
+ "user_name":"bc1qp84qrxsntmpyekp9vzdenlt8khnj0h4wqafeqe",
+ "password":"x",
+ "min_diff":0.01
+}
    ```
 
 2. Run the program:
@@ -80,12 +81,13 @@ The way to run this miner on Android and iOS is to run a Linux Terminal on them,
 
 3. Change the wallet in this program to yours using nano or vim:
    ```json
-    pool_address = "public-pool.io"
-    pool_port = 21496
-    username = "Replace_Me_With_Your_BTC_Wallet"
-    password = "x"
-    min_diff = 0.01
-    ......
+{
+ "pool_address":"public-pool.io",
+ "pool_port": 21496,
+ "user_name":"bc1qp84qrxsntmpyekp9vzdenlt8khnj0h4wqafeqe",
+ "password":"x",
+ "min_diff":0.01
+}
    ```
 
 4. Run the program:
@@ -113,12 +115,13 @@ The way to run this miner on Android and iOS is to run a Linux Terminal on them,
 
 3. Change the wallet in this program to yours using nano or vim:
    ```json
-    pool_address = "public-pool.io"
-    pool_port = 21496
-    username = "Replace_Me_With_Your_BTC_Wallet"
-    password = "x"
-    min_diff = 0.01
-    ......
+{
+ "pool_address":"public-pool.io",
+ "pool_port": 21496,
+ "user_name":"bc1qp84qrxsntmpyekp9vzdenlt8khnj0h4wqafeqe",
+ "password":"x",
+ "min_diff":0.01
+}
    ```
 
 4. Run the miner:

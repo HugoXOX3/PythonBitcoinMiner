@@ -3,7 +3,43 @@ import json
 import hashlib
 import struct
 import time
+import os
 
+def get_input(prompt, data_type=str):
+    while True:
+        try:
+            value = data_type(input(prompt))
+            return value
+        except ValueError:
+            print(f"Invalid input. Please enter a valid {data_type.__name__}.")
+
+if os.path.isfile('config.json'):
+    print("config.json found,start mining")
+    with open('config.json','r') as file:
+        config = json.load(file)
+    pool_address = config['pool_address']
+    pool_port = config["pool_port"]
+    username = config["user_name"]
+    password = config["password"]
+    min_diff = config["min_diff"]
+else:
+    print("config.json doesn't exist,generating now")
+    pool_address = get_input("Enter the pool address: ")
+    pool_port = get_input("Enter the pool port: ", int)
+    user_name = get_input("Enter the user name: ")
+    password = get_input("Enter the password: ")
+    min_diff = get_input("Enter the minimum difficulty: ", float)
+    config_data = {
+        "pool_address": pool_address,
+        "pool_port": pool_port,
+        "user_name": user_name,
+        "password": password,
+        "min_diff": min_diff
+    }
+    with open("config.json", "w") as config_file:
+        json.dump(config_data, config_file, indent=4)
+    print("Configuration data has been written to config.json")
+    
 with open('config.json', 'r') as file:
     config = json.load(file)
 

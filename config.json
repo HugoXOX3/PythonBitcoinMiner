@@ -2,6 +2,6 @@
  "pool_address":"public-pool.io",
  "pool_port": 21496,
  "user_name":"bc1qp84qrxsntmpyekp9vzdenlt8khnj0h4wqafeqe",
- "passwowrd":"x",
+ "password":"x",
  "min_diff":0.01
 }

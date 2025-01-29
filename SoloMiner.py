@@ -11,7 +11,7 @@ with open('config.json','r') as file:
 pool_address = config['pool_address']
 pool_port = config["pool_port"]
 username = config["user_name"]
-password = config["passwowrd"]
+password = config["password"]
 min_diff = config["min_diff"]
 
 """

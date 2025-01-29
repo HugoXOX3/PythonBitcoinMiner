@@ -42,21 +42,13 @@ First, download the latest miner from [releases](https://github.com/HugoXOX3/BTC
 
 Download For [Windows](https://github.com/HugoXOX3/PythonBitcoinMiner/blob/main/SoloMiner.exe) / [Linux or MAC](https://github.com/HugoXOX3/PythonBitcoinMiner/blob/main/SoloMiner.py)
 
-1. Change the settings:
-   ```json
-    {
-     "pool_address":"public-pool.io",
-     "pool_port": 21496,
-     "user_name":"bc1qp84qrxsntmpyekp9vzdenlt8khnj0h4wqafeqe",
-     "password":"x",
-     "min_diff":0.01
-    }
-   ```
-
-2. Run the program:
+1. Run the program:
    ```sh
    python3 SoloMiner.py
    ```
+   or double click SoloMiner.exe
+
+The first time you run this program will generate a config.json for you by input your own data
 
 # Android & iOS
 
@@ -78,23 +70,12 @@ The way to run this miner on Android and iOS is to run a Linux Terminal on them,
    cd PythonMiner/Mobile_Version
    ```
 
-3. Edit ```config.json```
-   ```json
-    {
-     "pool_address":"public-pool.io",
-     "pool_port": 21496,
-     "user_name":"bc1qp84qrxsntmpyekp9vzdenlt8khnj0h4wqafeqe",
-     "password":"x",
-     "min_diff":0.01
-    }
-   ```
-
-4. Run the program:
+3. Run the program:
    ```sh
    python3 SoloMiner.py
    ```
 
-5. Input your Bitcoin address and enjoy mining.
+4. Input your Bitcoin address and enjoy mining.
 
 ---
 
@@ -110,23 +91,12 @@ The way to run this miner on Android and iOS is to run a Linux Terminal on them,
    cd PythonMiner/Mobile_Version
    ```
 
-3. Edit ```config.json``` personal information
-   ```json
-    {
-     "pool_address":"public-pool.io",
-     "pool_port": 21496,
-     "user_name":"bc1qp84qrxsntmpyekp9vzdenlt8khnj0h4wqafeqe",
-     "password":"x",
-     "min_diff":0.01
-    }
-   ```
-
-4. Run the miner:
+3. Run the miner:
    ```sh
    python3 SoloMiner.py
    ```
 
-5. Input your Bitcoin address and enjoy mining.
+4. Input your Bitcoin address and enjoy mining.
 
 ---
 

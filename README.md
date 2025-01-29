@@ -105,10 +105,8 @@ The way to run this miner on Android and iOS is to run a Linux Terminal on them,
    ```sh
    apk add python3
    apk add git
-   apk add py3-pip
-   pip3 install -r requirements.txt
    git clone https://github.com/HugoXOX3/PythonMiner.git
-   cd PythonMiner
+   cd PythonMiner/Android Version
    ```
 
 3. Change ```config.json``` into your personal information

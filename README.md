@@ -56,8 +56,6 @@ First, download the latest miner from [releases](https://github.com/HugoXOX3/BTC
    python3 SoloMiner.py
    ```
 
-![Windows example](https://github.com/HugoXOX3/PythonMiner/blob/main/Image/Windows%20Version.png)
-
 # Android & iOS
 
 The way to run this miner on Android and iOS is to run a Linux Terminal on them, like Termux & iSH.
@@ -131,8 +129,6 @@ The way to run this miner on Android and iOS is to run a Linux Terminal on them,
 
 5. Input your Bitcoin address and enjoy mining.
 
-![example](https://github.com/HugoXOX3/PythonMiner/blob/main/Image/IOS.jpeg)
-
 ---
 
 ## Warning
@@ -140,3 +136,7 @@ The way to run this miner on Android and iOS is to run a Linux Terminal on them,
 ⚠️ Mining Bitcoin on a mobile device with poor cooling may damage your device.
 
 ---
+
+## Donation
+
+BTC:bc1qk5tpd68l4gfj6uzkq7u0l998dzvzyjpzhgpvnm

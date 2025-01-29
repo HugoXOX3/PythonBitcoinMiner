@@ -72,12 +72,11 @@ The way to run this miner on Android and iOS is to run a Linux Terminal on them,
    pkg upgrade
    pkg install python3
    pkg install git
-   pip3 install -r requirements.txt
    git clone https://github.com/HugoXOX3/PythonMiner.git
-   cd PythonMiner
+   cd PythonMiner/Mobile_Version
    ```
 
-3. Change the wallet in this program to yours using nano or vim:
+3. Edit ```config.json```
    ```json
     {
      "pool_address":"public-pool.io",
@@ -106,10 +105,10 @@ The way to run this miner on Android and iOS is to run a Linux Terminal on them,
    apk add python3
    apk add git
    git clone https://github.com/HugoXOX3/PythonMiner.git
-   cd PythonMiner/Android Version
+   cd PythonMiner/Mobile_Version
    ```
 
-3. Change ```config.json``` into your personal information
+3. Edit ```config.json``` personal information
    ```json
     {
      "pool_address":"public-pool.io",

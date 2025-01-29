@@ -111,7 +111,7 @@ The way to run this miner on Android and iOS is to run a Linux Terminal on them,
    cd PythonMiner
    ```
 
-3. Change the wallet in this program to yours using nano or vim:
+3. Change ```config.json``` into your personal information
    ```json
     {
      "pool_address":"public-pool.io",

@@ -40,6 +40,8 @@ First, download the latest miner from [releases](https://github.com/HugoXOX3/BTC
 
 ## How to Use
 
+Download For [Windows](https://github.com/HugoXOX3/PythonBitcoinMiner/blob/main/SoloMiner.exe) / [Linux or MAC](https://github.com/HugoXOX3/PythonBitcoinMiner/blob/main/SoloMiner.py)
+
 1. Change the settings:
    ```json
     {

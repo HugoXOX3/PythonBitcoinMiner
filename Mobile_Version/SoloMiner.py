@@ -39,19 +39,6 @@ else:
     with open("config.json", "w") as config_file:
         json.dump(config_data, config_file, indent=4)
     print("Configuration data has been written to config.json")
-    
-with open('config.json', 'r') as file:
-    config = json.load(file)
-
-pool_address = config['pool_address']
-pool_port = config["pool_port"]
-username = config["user_name"]
-password = config["password"]
-min_diff = config["min_diff"]
-
-"""
-{'pool_address': 'public-pool.io', 'pool_port': 21496, 'user_name': 'bc1qp84qrxsntmpyekp9vzdenlt8khnj0h4wqafeqe', 'passwowrd': 'x', 'min_diff': 0.01}
-"""
 
 def connect_to_pool(pool_address, pool_port, timeout=30, retries=5):
     for attempt in range(retries):

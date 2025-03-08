@@ -1,0 +1,707 @@
+Date/Time:       2025-03-08 09:12:36 
+Command line:    C:\Users\HCMLXOX\AppData\Local\Programs\Python\Python311\Scripts\briefcase run android
+
+OS Release:      Windows 10
+OS Version:      10.0.22631
+Architecture:    AMD64
+Platform:        Windows-10-10.0.22631-SP0
+
+Python exe:      C:\Users\HCMLXOX\AppData\Local\Programs\Python\Python311\python.exe
+Python version:  3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)]
+Virtual env:     False
+Conda env:       False
+
+Briefcase:       0.3.22
+Target platform: android
+Target format:   gradle
+
+Environment Variables:
+	ALLUSERSPROFILE=C:\ProgramData
+	APPDATA=C:\Users\HCMLXOX\AppData\Roaming
+	ASL.LOG=Destination=file
+	CHOCOLATEYINSTALL=C:\ProgramData\chocolatey
+	CHOCOLATEYLASTPATHUPDATE=133562449613500942
+	COMMONPROGRAMFILES=C:\Program Files\Common Files
+	COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+	COMMONPROGRAMW6432=C:\Program Files\Common Files
+	COMPUTERNAME=DESKTOP-VRU01R8
+	COMSPEC=C:\Windows\system32\cmd.exe
+	CUDA_DEVICE_ORDER=PCI_BUS_ID
+	CUDA_PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1
+	CUDA_PATH_V10_1=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1
+	CUDA_PATH_V12_3=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3
+	DRIVERDATA=C:\Windows\System32\Drivers\DriverData
+	EFC_9816=1
+	FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+	FPS_BROWSER_USER_PROFILE_STRING=Default
+	GPU_64BIT_ATOMICS=1
+	GPU_ENABLE_LARGE_ALLOCATION=100
+	GPU_FORCE_64BIT_PTR=1
+	GPU_MAX_ALLOC_PERCENT=100
+	GPU_MAX_HEAP_SIZE=100
+	GPU_MAX_SINGLE_ALLOC_PERCENT=100
+	GPU_MAX_USE_SYNC_OBJECTS=1
+	GPU_MAX_WORKGROUP_SIZE=1024
+	GPU_SINGLE_ALLOC_PERCENT=100
+	GPU_USE_SYNC_OBJECTS=1
+	HOMEDRIVE=C:
+	HOMEPATH=\Users\HCMLXOX
+	LOCALAPPDATA=C:\Users\HCMLXOX\AppData\Local
+	LOGONSERVER=\\DESKTOP-VRU01R8
+	NUMBER_OF_PROCESSORS=4
+	NVCUDASAMPLES10_1_ROOT=C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.1
+	NVCUDASAMPLES_ROOT=C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.1
+	NVTOOLSEXT_PATH=C:\Program Files\NVIDIA Corporation\NvToolsExt\
+	ONEDRIVE=C:\Users\HCMLXOX\OneDrive
+	OS=Windows_NT
+	PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\libnvvp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3\libnvvp;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Microsoft\jdk-17.0.8.101-hotspot\bin;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\WireGuard\;C:\Program Files\dotnet\;C:\Program Files\Bandizip\;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Cloudflare\Cloudflare WARP\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\ZeroTier\One\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\NVIDIA Corporation\Nsight Compute 2019.1\;C:\Program Files (x86)\gnupg\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\CMake\bin;C:\Program Files\PuTTY\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\HCMLXOX\.local\share\solana\install\active_release\bin;C:\Users\HCMLXOX\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\HCMLXOX\AppData\Local\Programs\Python\Python311\;C:\Users\HCMLXOX\AppData\Local\Microsoft\WindowsApps;C:\Users\HCMLXOX\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\HCMLXOX\.dotnet\tools;C:\Users\HCMLXOX\AppData\Roaming\npm;C:\Users\HCMLXOX\AppData\Local\GitHubDesktop\bin
+	PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+	PROCESSOR_ARCHITECTURE=AMD64
+	PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 94 Stepping 3, GenuineIntel
+	PROCESSOR_LEVEL=6
+	PROCESSOR_REVISION=5e03
+	PROGRAMDATA=C:\ProgramData
+	PROGRAMFILES=C:\Program Files
+	PROGRAMFILES(X86)=C:\Program Files (x86)
+	PROGRAMW6432=C:\Program Files
+	PROMPT=$P$G
+	PSMODULEPATH=C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+	PUBLIC=C:\Users\Public
+	SESSIONNAME=Console
+	SYSTEMDRIVE=C:
+	SYSTEMROOT=C:\Windows
+	TEMP=C:\Users\HCMLXOX\AppData\Local\Temp
+	TMP=C:\Users\HCMLXOX\AppData\Local\Temp
+	USERDOMAIN=DESKTOP-VRU01R8
+	USERDOMAIN_ROAMINGPROFILE=DESKTOP-VRU01R8
+	USERNAME=HCMLXOX
+	USERPROFILE=C:\Users\HCMLXOX
+	VBOX_MSI_INSTALL_PATH=C:\Program Files\Oracle\VirtualBox\
+	WINDIR=C:\Windows
+
+pyproject.toml:
+# This project was generated with 0.3.22 using template: https://github.com/beeware/briefcase-template@v0.3.22
+[tool.briefcase]
+project_name = "AndroidBitcoinMiner"
+bundle = "hi.hcmlxox"
+version = "0.0.1"
+url = "https://github.com/HugoXOX3"
+license.file = "LICENSE"
+author = "Hugo Cheung"
+author_email = "hugocheung0708@gmail.com"
+
+[tool.briefcase.app.androidbitcoinminer]
+formal_name = "AndroidBitcoinMiner"
+description = "An android version of HCMLXOX PythonBitcoinMiner"
+long_description = """More details about the app should go here.
+"""
+sources = [
+    "src/androidbitcoinminer",
+]
+test_sources = [
+    "tests",
+]
+
+requires = [
+]
+test_requires = [
+    "pytest",
+]
+
+[tool.briefcase.app.androidbitcoinminer.macOS]
+universal_build = true
+requires = [
+    "toga-cocoa~=0.4.7",
+    "std-nslog~=1.0.3",
+]
+
+[tool.briefcase.app.androidbitcoinminer.linux]
+requires = [
+    "toga-gtk~=0.4.7",
+]
+
+[tool.briefcase.app.androidbitcoinminer.linux.system.debian]
+system_requires = [
+    # Needed to compile pycairo wheel
+    "libcairo2-dev",
+    # Needed to compile PyGObject wheel
+    "libgirepository1.0-dev",
+]
+
+system_runtime_requires = [
+    # Needed to provide GTK and its GI bindings
+    "gir1.2-gtk-3.0",
+    "libgirepository-1.0-1",
+    # Dependencies that GTK looks for at runtime
+    "libcanberra-gtk3-module",
+    # Needed to provide WebKit2 at runtime
+    # Note: Debian 11 and Ubuntu 20.04 require gir1.2-webkit2-4.0 instead
+    # "gir1.2-webkit2-4.1",
+]
+
+[tool.briefcase.app.androidbitcoinminer.linux.system.rhel]
+system_requires = [
+    # Needed to compile pycairo wheel
+    "cairo-gobject-devel",
+    # Needed to compile PyGObject wheel
+    "gobject-introspection-devel",
+]
+
+system_runtime_requires = [
+    # Needed to support Python bindings to GTK
+    "gobject-introspection",
+    # Needed to provide GTK
+    "gtk3",
+    # Dependencies that GTK looks for at runtime
+    "libcanberra-gtk3",
+    # Needed to provide WebKit2 at runtime
+    # "webkit2gtk3",
+]
+
+[tool.briefcase.app.androidbitcoinminer.linux.system.suse]
+system_requires = [
+    # Needed to compile pycairo wheel
+    "cairo-devel",
+    # Needed to compile PyGObject wheel
+    "gobject-introspection-devel",
+]
+
+system_runtime_requires = [
+    # Needed to provide GTK
+    "gtk3",
+    # Needed to support Python bindings to GTK
+    "gobject-introspection", "typelib(Gtk) = 3.0",
+    # Dependencies that GTK looks for at runtime
+    "libcanberra-gtk3-module",
+    # Needed to provide WebKit2 at runtime
+    # "libwebkit2gtk3", "typelib(WebKit2)",
+]
+
+[tool.briefcase.app.androidbitcoinminer.linux.system.arch]
+system_requires = [
+    # Needed to compile pycairo wheel
+    "cairo",
+    # Needed to compile PyGObject wheel
+    "gobject-introspection",
+    # Runtime dependencies that need to exist so that the
+    # Arch package passes final validation.
+    # Needed to provide GTK
+    "gtk3",
+    # Dependencies that GTK looks for at runtime
+    "libcanberra",
+    # Needed to provide WebKit2
+    # "webkit2gtk",
+]
+
+system_runtime_requires = [
+    # Needed to provide GTK
+    "gtk3",
+    # Needed to provide PyGObject bindings
+    "gobject-introspection-runtime",
+    # Dependencies that GTK looks for at runtime
+    "libcanberra",
+    # Needed to provide WebKit2 at runtime
+    # "webkit2gtk",
+]
+
+[tool.briefcase.app.androidbitcoinminer.linux.appimage]
+manylinux = "manylinux_2_28"
+
+system_requires = [
+    # Needed to compile pycairo wheel
+    "cairo-gobject-devel",
+    # Needed to compile PyGObject wheel
+    "gobject-introspection-devel",
+    # Needed to provide GTK
+    "gtk3-devel",
+    # Dependencies that GTK looks for at runtime, that need to be
+    # in the build environment to be picked up by linuxdeploy
+    "libcanberra-gtk3",
+    "PackageKit-gtk3-module",
+    "gvfs-client",
+]
+
+linuxdeploy_plugins = [
+    "DEPLOY_GTK_VERSION=3 gtk",
+]
+
+[tool.briefcase.app.androidbitcoinminer.linux.flatpak]
+flatpak_runtime = "org.gnome.Platform"
+flatpak_runtime_version = "47"
+flatpak_sdk = "org.gnome.Sdk"
+
+[tool.briefcase.app.androidbitcoinminer.windows]
+requires = [
+    "toga-winforms~=0.4.7",
+]
+
+# Mobile deployments
+[tool.briefcase.app.androidbitcoinminer.iOS]
+requires = [
+    "toga-iOS~=0.4.7",
+    "std-nslog~=1.0.3",
+]
+
+[tool.briefcase.app.androidbitcoinminer.android]
+requires = [
+    "toga-android~=0.4.7",
+]
+
+base_theme = "Theme.MaterialComponents.Light.DarkActionBar"
+
+build_gradle_dependencies = [
+    "com.google.android.material:material:1.12.0",
+    # Needed for DetailedList
+    # "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0",
+    # Needed for MapView
+    # "org.osmdroid:osmdroid-android:6.1.20",
+]
+
+# Web deployments
+[tool.briefcase.app.androidbitcoinminer.web]
+requires = [
+    "toga-web~=0.4.7",
+]
+style_framework = "Shoelace v2.3"
+
+Briefcase Log:
+[09:11:15] Using JDK at C:\Users\HCMLXOX\AppData\Local\BeeWare\briefcase\Cache\tools\java17                                                                              java.py:259
+           Using Android SDK at C:\Users\HCMLXOX\AppData\Local\BeeWare\briefcase\Cache\tools\android_sdk                                                          android_sdk.py:375
+           Downloading the Android emulator...                                                                                                                    android_sdk.py:653
+                                                                                                                                                                   subprocess.py:838
+           >>> Running Command:                                                                                                                                    subprocess.py:838
+           >>>     'C:\Users\HCMLXOX\AppData\Local\BeeWare\briefcase\Cache\tools\android_sdk\cmdline-tools\12.0\bin\sdkmanager.bat' platform-tools emulator        subprocess.py:838
+           >>> Working Directory:                                                                                                                                  subprocess.py:838
+           >>>     C:\Users\HCMLXOX\Desktop\androidbitcoinminer                                                                                                    subprocess.py:838
+           >>> Environment Overrides:                                                                                                                              subprocess.py:838
+           >>>     ANDROID_HOME=C:\Users\HCMLXOX\AppData\Local\BeeWare\briefcase\Cache\tools\android_sdk                                                           subprocess.py:838
+           >>>     ANDROID_SDK_ROOT=C:\Users\HCMLXOX\AppData\Local\BeeWare\briefcase\Cache\tools\android_sdk                                                       subprocess.py:838
+           >>>     JAVA_HOME=C:\Users\HCMLXOX\AppData\Local\BeeWare\briefcase\Cache\tools\java17                                                                   subprocess.py:838
+[09:12:13] >>> Return code: 0                                                                                                                                      subprocess.py:838
+                                                                                                                                                                   subprocess.py:838
+                                                                                                                                                                       create.py:923
+           [androidbitcoinminer] Generating application template...                                                                                                    create.py:923
+           Using app template: https://github.com/beeware/briefcase-android-gradle-template.git, branch v0.3.22                                                         base.py:1131
+           Cloning template 'https://github.com/beeware/briefcase-android-gradle-template.git'...                                                                        base.py:963
+[09:12:35]                                                                                                                                                            __main__.py:42
+           Unable to clone repository 'https://github.com/beeware/briefcase-android-gradle-template.git'.                                                             __main__.py:43
+                                                                                                                                                                      __main__.py:43
+           Unable to access 'https://github.com/beeware/briefcase-android-gradle-template.git/': Failure when receiving data from the peer.                           __main__.py:43
+           Saving log... started                                                                                                                                      console.py:432
+
+Main thread traceback:
+╭─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────╮
+│ C:\Users\HCMLXOX\AppData\Local\Programs\Python\Python311\Lib\site-packages\briefcase\commands\base.py:965 in update_cookiecutter_cache                                           │
+│                                                                                                                                                                                  │
+│    962 │   │   │   │   try:                                                                                                                                                      │
+│    963 │   │   │   │   │   self.console.info(f"Cloning template {template!r}...")                                                                                                │
+│    964 │   │   │   │   │   cached_template.mkdir(exist_ok=True, parents=True)                                                                                                    │
+│ ❱  965 │   │   │   │   │   repo = self.tools.git.Repo.clone_from(                                                                                                                │
+│    966 │   │   │   │   │   │   url=template,                                                                                                                                     │
+│    967 │   │   │   │   │   │   to_path=cached_template,                                                                                                                          │
+│    968 │   │   │   │   │   │   filter=["blob:none"],                                                                                                                             │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────────────────────────── locals ────────────────────────────────────────────────────────────────╮                                        │
+│ │            branch = 'v0.3.22'                                                                                                         │                                        │
+│ │   cached_template = WindowsPath('C:/Users/HCMLXOX/AppData/Local/BeeWare/briefcase/Cache/templates/briefcase-android-gradle-template') │                                        │
+│ │ git_fatal_message = ["unable to access 'https://github.com/beeware/briefcase-android-gradle-template.g"+49]                           │                                        │
+│ │              hint = "Unable to access 'https://github.com/beeware/briefcase-android-gradle-template.g"+48                             │                                        │
+│ │              self = <briefcase.platforms.android.gradle.GradleCreateCommand object at 0x000002734616EC90>                             │                                        │
+│ │          template = 'https://github.com/beeware/briefcase-android-gradle-template.git'                                                │                                        │
+│ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                        │
+│                                                                                                                                                                                  │
+│ C:\Users\HCMLXOX\AppData\Local\Programs\Python\Python311\Lib\site-packages\git\repo\base.py:1541 in clone_from                                                                   │
+│                                                                                                                                                                                  │
+│   1538 │   │   git = cls.GitCommandWrapperType(os.getcwd())                                                                                                                      │
+│   1539 │   │   if env is not None:                                                                                                                                               │
+│   1540 │   │   │   git.update_environment(**env)                                                                                                                                 │
+│ ❱ 1541 │   │   return cls._clone(                                                                                                                                                │
+│   1542 │   │   │   git,                                                                                                                                                          │
+│   1543 │   │   │   url,                                                                                                                                                          │
+│   1544 │   │   │   to_path,                                                                                                                                                      │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────────────────────────────────── locals ──────────────────────────────────────────────────────────────────╮                                   │
+│ │   allow_unsafe_options = False                                                                                                             │                                   │
+│ │ allow_unsafe_protocols = False                                                                                                             │                                   │
+│ │                    cls = <class 'git.repo.base.Repo'>                                                                                      │                                   │
+│ │                    env = None                                                                                                              │                                   │
+│ │                    git = <git.cmd.Git object at 0x00000273467D0940>                                                                        │                                   │
+│ │                 kwargs = {'filter': ['blob:none'], 'no_checkout': True}                                                                    │                                   │
+│ │          multi_options = None                                                                                                              │                                   │
+│ │               progress = None                                                                                                              │                                   │
+│ │                to_path = WindowsPath('C:/Users/HCMLXOX/AppData/Local/BeeWare/briefcase/Cache/templates/briefcase-android-gradle-template') │                                   │
+│ │                    url = 'https://github.com/beeware/briefcase-android-gradle-template.git'                                                │                                   │
+│ ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                   │
+│                                                                                                                                                                                  │
+│ C:\Users\HCMLXOX\AppData\Local\Programs\Python\Python311\Lib\site-packages\git\repo\base.py:1412 in _clone                                                                       │
+│                                                                                                                                                                                  │
+│   1409 │   │   │   cmdline = remove_password_if_present(cmdline)                                                                                                                 │
+│   1410 │   │   │                                                                                                                                                                 │
+│   1411 │   │   │   _logger.debug("Cmd(%s)'s unused stdout: %s", cmdline, stdout)                                                                                                 │
+│ ❱ 1412 │   │   │   finalize_process(proc, stderr=stderr)                                                                                                                         │
+│   1413 │   │                                                                                                                                                                     │
+│   1414 │   │   # Our git command could have a different working dir than our actual                                                                                              │
+│   1415 │   │   # environment, hence we prepend its working dir if required.                                                                                                      │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────────────────────────── locals ───────────────────────────────────────────────────────────╮                                                  │
+│ │   allow_unsafe_options = False                                                                                              │                                                  │
+│ │ allow_unsafe_protocols = False                                                                                              │                                                  │
+│ │             clone_path = 'C:\\Users\\HCMLXOX\\AppData\\Local\\BeeWare\\briefcase\\Cache\\templates\\briefcase-andro'+18     │                                                  │
+│ │                    cls = <class 'git.repo.base.Repo'>                                                                       │                                                  │
+│ │                cmdline = [                                                                                                  │                                                  │
+│ │                          │   'git',                                                                                         │                                                  │
+│ │                          │   'clone',                                                                                       │                                                  │
+│ │                          │   '-v',                                                                                          │                                                  │
+│ │                          │   '--filter=blob:none',                                                                          │                                                  │
+│ │                          │   '--no-checkout',                                                                               │                                                  │
+│ │                          │   '--',                                                                                          │                                                  │
+│ │                          │   'https://github.com/beeware/briefcase-android-gradle-template.git',                            │                                                  │
+│ │                          │   'C:\\Users\\HCMLXOX\\AppData\\Local\\BeeWare\\briefcase\\Cache\\templates\\briefcase-andro'+18 │                                                  │
+│ │                          ]                                                                                                  │                                                  │
+│ │                    git = <git.cmd.Git object at 0x00000273467D0940>                                                         │                                                  │
+│ │                 kwargs = {'filter': ['blob:none'], 'no_checkout': True}                                                     │                                                  │
+│ │                  multi = None                                                                                               │                                                  │
+│ │          multi_options = None                                                                                               │                                                  │
+│ │       odb_default_type = <class 'git.db.GitCmdObjectDB'>                                                                    │                                                  │
+│ │                   odbt = <class 'git.db.GitCmdObjectDB'>                                                                    │                                                  │
+│ │                   path = 'C:\\Users\\HCMLXOX\\AppData\\Local\\BeeWare\\briefcase\\Cache\\templates\\briefcase-andro'+18     │                                                  │
+│ │                   proc = <git.cmd.Git.AutoInterrupt object at 0x00000273467D9200>                                           │                                                  │
+│ │               progress = None                                                                                               │                                                  │
+│ │                sep_dir = None                                                                                               │                                                  │
+│ │                 stderr = "Cloning into 'C:\\Users\\HCMLXOX\\AppData\\Local\\BeeWare\\briefcase\\Cache\\templates\\b"+172    │                                                  │
+│ │                 stdout = ''                                                                                                 │                                                  │
+│ │                    url = 'https://github.com/beeware/briefcase-android-gradle-template.git'                                 │                                                  │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                  │
+│                                                                                                                                                                                  │
+│ C:\Users\HCMLXOX\AppData\Local\Programs\Python\Python311\Lib\site-packages\git\util.py:504 in finalize_process                                                                   │
+│                                                                                                                                                                                  │
+│    501 │   """Wait for the process (clone, fetch, pull or push) and handle its errors                                                                                            │
+│    502 │   accordingly."""                                                                                                                                                       │
+│    503 │   # TODO: No close proc-streams??                                                                                                                                       │
+│ ❱  504 │   proc.wait(**kwargs)                                                                                                                                                   │
+│    505                                                                                                                                                                           │
+│    506                                                                                                                                                                           │
+│    507 @overload                                                                                                                                                                 │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────────────────── locals ───────────────────────────────────────────────────────╮                                                         │
+│ │ kwargs = {'stderr': "Cloning into 'C:\\Users\\HCMLXOX\\AppData\\Local\\BeeWare\\briefcase\\Cache\\templates\\b"+172} │                                                         │
+│ │   proc = <git.cmd.Git.AutoInterrupt object at 0x00000273467D9200>                                                    │                                                         │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                         │
+│                                                                                                                                                                                  │
+│ C:\Users\HCMLXOX\AppData\Local\Programs\Python\Python311\Lib\site-packages\git\cmd.py:834 in wait                                                                                │
+│                                                                                                                                                                                  │
+│    831 │   │   │   if status != 0:                                                                                                                                               │
+│    832 │   │   │   │   errstr = read_all_from_possibly_closed_stream(p_stderr)                                                                                                   │
+│    833 │   │   │   │   _logger.debug("AutoInterrupt wait stderr: %r" % (errstr,))                                                                                                │
+│ ❱  834 │   │   │   │   raise GitCommandError(remove_password_if_present(self.args), status, err                                                                                  │
+│    835 │   │   │   return status                                                                                                                                                 │
+│    836 │                                                                                                                                                                         │
+│    837 │   # END auto interrupt                                                                                                                                                  │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────────────────────────────── locals ───────────────────────────────────────────────────────────────────╮                                 │
+│ │                               errstr = b"Cloning into 'C:\\Users\\HCMLXOX\\AppData\\Local\\BeeWare\\briefcase\\Cache\\templates\\b"+172      │                                 │
+│ │                             p_stderr = <_io.TextIOWrapper name=7 encoding='utf-8'>                                                           │                                 │
+│ │ read_all_from_possibly_closed_stream = <function Git.AutoInterrupt.wait.<locals>.read_all_from_possibly_closed_stream at 0x00000273467D7060> │                                 │
+│ │                                 self = <git.cmd.Git.AutoInterrupt object at 0x00000273467D9200>                                              │                                 │
+│ │                               status = 128                                                                                                   │                                 │
+│ │                               stderr = "Cloning into 'C:\\Users\\HCMLXOX\\AppData\\Local\\BeeWare\\briefcase\\Cache\\templates\\b"+172       │                                 │
+│ │                             stderr_b = b"Cloning into 'C:\\Users\\HCMLXOX\\AppData\\Local\\BeeWare\\briefcase\\Cache\\templates\\b"+172      │                                 │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+GitCommandError: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v --filter=blob:none --no-checkout -- https://github.com/beeware/briefcase-android-gradle-template.git C:\Users\HCMLXOX\AppData\Local\BeeWare\briefcase\Cache\templates\briefcase-android-gradle-template
+  stderr: 'Cloning into 'C:\Users\HCMLXOX\AppData\Local\BeeWare\briefcase\Cache\templates\briefcase-android-gradle-template'...
+fatal: unable to access 'https://github.com/beeware/briefcase-android-gradle-template.git/': Failure when receiving data from the peer
+'
+
+The above exception was the direct cause of the following exception:
+
+╭─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────╮
+│ C:\Users\HCMLXOX\AppData\Local\Programs\Python\Python311\Lib\site-packages\briefcase\__main__.py:27 in main                                                                      │
+│                                                                                                                                                                                  │
+│   24 │   │   │   Path.cwd() / "pyproject.toml",                                                                                                                                  │
+│   25 │   │   │   overrides=overrides,                                                                                                                                            │
+│   26 │   │   )                                                                                                                                                                   │
+│ ❱ 27 │   │   command(**options)                                                                                                                                                  │
+│   28 │   except HelpText as e:                                                                                                                                                   │
+│   29 │   │   console.info()                                                                                                                                                      │
+│   30 │   │   console.info(str(e))                                                                                                                                                │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────────────────────────────────────────────── locals ───────────────────────────────────────────────────────────────────────────────────╮ │
+│ │       command = <briefcase.platforms.android.gradle.GradleRunCommand object at 0x000002734619D590>                                                                           │ │
+│ │       Command = <class 'briefcase.platforms.android.gradle.GradleRunCommand'>                                                                                                │ │
+│ │       console = <briefcase.console.Console object at 0x0000027342658310>                                                                                                     │ │
+│ │             e = BriefcaseCommandError("Unable to clone repository 'https://github.com/beeware/briefcase-android-gradle-template.git'.\n\nUnable to access                    │ │
+│ │                 'https://github.com/beeware/briefcase-android-gradle-template.git/': Failure when receiving data from the peer.")                                            │ │
+│ │ extra_cmdline = []                                                                                                                                                           │ │
+│ │       options = {                                                                                                                                                            │ │
+│ │                 │   'appname': None,                                                                                                                                         │ │
+│ │                 │   'update': False,                                                                                                                                         │ │
+│ │                 │   'update_requirements': False,                                                                                                                            │ │
+│ │                 │   'update_support': False,                                                                                                                                 │ │
+│ │                 │   'update_stub': False,                                                                                                                                    │ │
+│ │                 │   'update_resources': False,                                                                                                                               │ │
+│ │                 │   'no_update': False,                                                                                                                                      │ │
+│ │                 │   'test_mode': False,                                                                                                                                      │ │
+│ │                 │   'device_or_avd': None,                                                                                                                                   │ │
+│ │                 │   'extra_emulator_args': None,                                                                                                                             │ │
+│ │                 │   ... +2                                                                                                                                                   │ │
+│ │                 }                                                                                                                                                            │ │
+│ │     overrides = {}                                                                                                                                                           │ │
+│ │        result = 200                                                                                                                                                          │ │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+│                                                                                                                                                                                  │
+│ C:\Users\HCMLXOX\AppData\Local\Programs\Python\Python311\Lib\site-packages\briefcase\commands\run.py:309 in __call__                                                             │
+│                                                                                                                                                                                  │
+│   306 │   │   │   │   test_mode and not no_update                                                                                                                                │
+│   307 │   │   │   )  # Test mode, but updates have not been disabled                                                                                                             │
+│   308 │   │   ):                                                                                                                                                                 │
+│ ❱ 309 │   │   │   state = self.build_command(                                                                                                                                    │
+│   310 │   │   │   │   app,                                                                                                                                                       │
+│   311 │   │   │   │   update=update,                                                                                                                                             │
+│   312 │   │   │   │   update_requirements=update_requirements,                                                                                                                   │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────────────────────────────────────────── locals ───────────────────────────────────────────────────────────────────────────────╮         │
+│ │                 app = <hi.hcmlxox.androidbitcoinminer v0.0.1 AppConfig>                                                                                              │         │
+│ │             appname = None                                                                                                                                           │         │
+│ │           exec_file = WindowsPath('C:/Users/HCMLXOX/Desktop/androidbitcoinminer/build/androidbitcoinminer/android/gradle/app/build/outputs/apk/debug/app-debug.apk') │         │
+│ │           no_update = False                                                                                                                                          │         │
+│ │             options = {'device_or_avd': None, 'extra_emulator_args': None, 'shutdown_on_exit': False}                                                                │         │
+│ │         passthrough = []                                                                                                                                             │         │
+│ │                self = <briefcase.platforms.android.gradle.GradleRunCommand object at 0x000002734619D590>                                                             │         │
+│ │       template_file = WindowsPath('C:/Users/HCMLXOX/Desktop/androidbitcoinminer/build/androidbitcoinminer/android/gradle')                                           │         │
+│ │           test_mode = False                                                                                                                                          │         │
+│ │              update = False                                                                                                                                          │         │
+│ │ update_requirements = False                                                                                                                                          │         │
+│ │    update_resources = False                                                                                                                                          │         │
+│ │         update_stub = False                                                                                                                                          │         │
+│ │      update_support = False                                                                                                                                          │         │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯         │
+│                                                                                                                                                                                  │
+│ C:\Users\HCMLXOX\AppData\Local\Programs\Python\Python311\Lib\site-packages\briefcase\commands\build.py:127 in __call__                                                           │
+│                                                                                                                                                                                  │
+│   124 │   │   self.finalize(app)                                                                                                                                                 │
+│   125 │   │                                                                                                                                                                      │
+│   126 │   │   if app:                                                                                                                                                            │
+│ ❱ 127 │   │   │   state = self._build_app(                                                                                                                                       │
+│   128 │   │   │   │   app,                                                                                                                                                       │
+│   129 │   │   │   │   update=update,                                                                                                                                             │
+│   130 │   │   │   │   update_requirements=update_requirements,                                                                                                                   │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────────────────── locals ──────────────────────────────────────────────────╮                                                                   │
+│ │                 app = <hi.hcmlxox.androidbitcoinminer v0.0.1 AppConfig>                                    │                                                                   │
+│ │           no_update = False                                                                                │                                                                   │
+│ │             options = {'device_or_avd': None, 'extra_emulator_args': None, 'shutdown_on_exit': False}      │                                                                   │
+│ │                self = <briefcase.platforms.android.gradle.GradleBuildCommand object at 0x000002734346F890> │                                                                   │
+│ │           test_mode = False                                                                                │                                                                   │
+│ │              update = False                                                                                │                                                                   │
+│ │ update_requirements = False                                                                                │                                                                   │
+│ │    update_resources = False                                                                                │                                                                   │
+│ │         update_stub = False                                                                                │                                                                   │
+│ │      update_support = False                                                                                │                                                                   │
+│ ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                   │
+│                                                                                                                                                                                  │
+│ C:\Users\HCMLXOX\AppData\Local\Programs\Python\Python311\Lib\site-packages\briefcase\commands\build.py:52 in _build_app                                                          │
+│                                                                                                                                                                                  │
+│    49 │   │   :param test_mode: Is the app being build in test mode?                                                                                                             │
+│    50 │   │   """                                                                                                                                                                │
+│    51 │   │   if not self.bundle_path(app).exists():                                                                                                                             │
+│ ❱  52 │   │   │   state = self.create_command(app, test_mode=test_mode, **options)                                                                                               │
+│    53 │   │   elif (                                                                                                                                                             │
+│    54 │   │   │   update  # An explicit update has been requested                                                                                                                │
+│    55 │   │   │   or update_requirements  # An explicit update of requirements has been reques                                                                                   │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────────────────── locals ──────────────────────────────────────────────────╮                                                                   │
+│ │                 app = <hi.hcmlxox.androidbitcoinminer v0.0.1 AppConfig>                                    │                                                                   │
+│ │           no_update = False                                                                                │                                                                   │
+│ │             options = {'device_or_avd': None, 'extra_emulator_args': None, 'shutdown_on_exit': False}      │                                                                   │
+│ │                self = <briefcase.platforms.android.gradle.GradleBuildCommand object at 0x000002734346F890> │                                                                   │
+│ │           test_mode = False                                                                                │                                                                   │
+│ │              update = False                                                                                │                                                                   │
+│ │ update_requirements = False                                                                                │                                                                   │
+│ │    update_resources = False                                                                                │                                                                   │
+│ │         update_stub = False                                                                                │                                                                   │
+│ │      update_support = False                                                                                │                                                                   │
+│ ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                   │
+│                                                                                                                                                                                  │
+│ C:\Users\HCMLXOX\AppData\Local\Programs\Python\Python311\Lib\site-packages\briefcase\commands\create.py:984 in __call__                                                          │
+│                                                                                                                                                                                  │
+│    981 │   │   self.finalize(app)                                                                                                                                                │
+│    982 │   │                                                                                                                                                                     │
+│    983 │   │   if app:                                                                                                                                                           │
+│ ❱  984 │   │   │   state = self.create_app(app, **options)                                                                                                                       │
+│    985 │   │   else:                                                                                                                                                             │
+│    986 │   │   │   state = None                                                                                                                                                  │
+│    987 │   │   │   for app_name, app in sorted(self.apps.items()):                                                                                                               │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────────────── locals ────────────────────────────────────────────────────╮                                                                │
+│ │     app = <hi.hcmlxox.androidbitcoinminer v0.0.1 AppConfig>                                                   │                                                                │
+│ │ options = {'test_mode': False, 'device_or_avd': None, 'extra_emulator_args': None, 'shutdown_on_exit': False} │                                                                │
+│ │    self = <briefcase.platforms.android.gradle.GradleCreateCommand object at 0x000002734616EC90>               │                                                                │
+│ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                │
+│                                                                                                                                                                                  │
+│ C:\Users\HCMLXOX\AppData\Local\Programs\Python\Python311\Lib\site-packages\briefcase\commands\create.py:924 in create_app                                                        │
+│                                                                                                                                                                                  │
+│    921 │   │   │   self.tools.shutil.rmtree(bundle_path)                                                                                                                         │
+│    922 │   │                                                                                                                                                                     │
+│    923 │   │   self.console.info("Generating application template...", prefix=app.app_name)                                                                                      │
+│ ❱  924 │   │   self.generate_app_template(app=app)                                                                                                                               │
+│    925 │   │                                                                                                                                                                     │
+│    926 │   │   self.console.info("Installing support package...", prefix=app.app_name)                                                                                           │
+│    927 │   │   self.install_app_support_package(app=app)                                                                                                                         │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────────────────────── locals ──────────────────────────────────────────────────────╮                                                           │
+│ │         app = <hi.hcmlxox.androidbitcoinminer v0.0.1 AppConfig>                                                    │                                                           │
+│ │ bundle_path = WindowsPath('C:/Users/HCMLXOX/Desktop/androidbitcoinminer/build/androidbitcoinminer/android/gradle') │                                                           │
+│ │     options = {'device_or_avd': None, 'extra_emulator_args': None, 'shutdown_on_exit': False}                      │                                                           │
+│ │        self = <briefcase.platforms.android.gradle.GradleCreateCommand object at 0x000002734616EC90>                │                                                           │
+│ │   test_mode = False                                                                                                │                                                           │
+│ ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                           │
+│                                                                                                                                                                                  │
+│ C:\Users\HCMLXOX\AppData\Local\Programs\Python\Python311\Lib\site-packages\briefcase\commands\create.py:256 in generate_app_template                                             │
+│                                                                                                                                                                                  │
+│    253 │   │   output_path = self.bundle_path(app).parent                                                                                                                        │
+│    254 │   │   output_path.mkdir(parents=True, exist_ok=True)                                                                                                                    │
+│    255 │   │                                                                                                                                                                     │
+│ ❱  256 │   │   self.generate_template(                                                                                                                                           │
+│    257 │   │   │   template=app.template if app.template else self.app_template_url,                                                                                             │
+│    258 │   │   │   branch=app.template_branch,                                                                                                                                   │
+│    259 │   │   │   output_path=output_path,                                                                                                                                      │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────────────────── locals ────────────────────────────────────────────────────────╮                                                        │
+│ │           app = <hi.hcmlxox.androidbitcoinminer v0.0.1 AppConfig>                                                     │                                                        │
+│ │ extra_context = {                                                                                                     │                                                        │
+│ │                 │   'project_name': 'AndroidBitcoinMiner',                                                            │                                                        │
+│ │                 │   'base_theme': 'Theme.MaterialComponents.Light.DarkActionBar',                                     │                                                        │
+│ │                 │   'build_gradle_dependencies': {                                                                    │                                                        │
+│ │                 │   │   'implementation': ['com.google.android.material:material:1.12.0']                             │                                                        │
+│ │                 │   },                                                                                                │                                                        │
+│ │                 │   'app_name': 'androidbitcoinminer',                                                                │                                                        │
+│ │                 │   'version': '0.0.1',                                                                               │                                                        │
+│ │                 │   'bundle': 'hi.hcmlxox',                                                                           │                                                        │
+│ │                 │   'description': 'An android version of HCMLXOX PythonBitcoinMiner',                                │                                                        │
+│ │                 │   'sources': ['src/androidbitcoinminer'],                                                           │                                                        │
+│ │                 │   'formal_name': 'AndroidBitcoinMiner',                                                             │                                                        │
+│ │                 │   'url': 'https://github.com/HugoXOX3',                                                             │                                                        │
+│ │                 │   ... +26                                                                                           │                                                        │
+│ │                 }                                                                                                     │                                                        │
+│ │   output_path = WindowsPath('C:/Users/HCMLXOX/Desktop/androidbitcoinminer/build/androidbitcoinminer/android')         │                                                        │
+│ │          self = <briefcase.platforms.android.gradle.GradleCreateCommand object at 0x000002734616EC90>                 │                                                        │
+│ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                        │
+│                                                                                                                                                                                  │
+│ C:\Users\HCMLXOX\AppData\Local\Programs\Python\Python311\Lib\site-packages\briefcase\commands\base.py:1135 in generate_template                                                  │
+│                                                                                                                                                                                  │
+│   1132 │   │   │   │   f"Using app template: {template}, branch {template_branch}"                                                                                               │
+│   1133 │   │   │   )                                                                                                                                                             │
+│   1134 │   │   │   # Unroll the new app template                                                                                                                                 │
+│ ❱ 1135 │   │   │   self._generate_template(                                                                                                                                      │
+│   1136 │   │   │   │   template=template,                                                                                                                                        │
+│   1137 │   │   │   │   branch=template_branch,                                                                                                                                   │
+│   1138 │   │   │   │   output_path=output_path,                                                                                                                                  │
+│                                                                                                                                                                                  │
+│ ╭──────────────────────────────────────────────────────── locals ─────────────────────────────────────────────────────────╮                                                      │
+│ │          branch = None                                                                                                  │                                                      │
+│ │   extra_context = {                                                                                                     │                                                      │
+│ │                   │   'project_name': 'AndroidBitcoinMiner',                                                            │                                                      │
+│ │                   │   'base_theme': 'Theme.MaterialComponents.Light.DarkActionBar',                                     │                                                      │
+│ │                   │   'build_gradle_dependencies': {                                                                    │                                                      │
+│ │                   │   │   'implementation': ['com.google.android.material:material:1.12.0']                             │                                                      │
+│ │                   │   },                                                                                                │                                                      │
+│ │                   │   'app_name': 'androidbitcoinminer',                                                                │                                                      │
+│ │                   │   'version': '0.0.1',                                                                               │                                                      │
+│ │                   │   'bundle': 'hi.hcmlxox',                                                                           │                                                      │
+│ │                   │   'description': 'An android version of HCMLXOX PythonBitcoinMiner',                                │                                                      │
+│ │                   │   'sources': ['src/androidbitcoinminer'],                                                           │                                                      │
+│ │                   │   'formal_name': 'AndroidBitcoinMiner',                                                             │                                                      │
+│ │                   │   'url': 'https://github.com/HugoXOX3',                                                             │                                                      │
+│ │                   │   ... +29                                                                                           │                                                      │
+│ │                   }                                                                                                     │                                                      │
+│ │     output_path = WindowsPath('C:/Users/HCMLXOX/Desktop/androidbitcoinminer/build/androidbitcoinminer/android')         │                                                      │
+│ │            self = <briefcase.platforms.android.gradle.GradleCreateCommand object at 0x000002734616EC90>                 │                                                      │
+│ │        template = 'https://github.com/beeware/briefcase-android-gradle-template.git'                                    │                                                      │
+│ │ template_branch = 'v0.3.22'                                                                                             │                                                      │
+│ │         version = <Version('0.3.22')>                                                                                   │                                                      │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                      │
+│                                                                                                                                                                                  │
+│ C:\Users\HCMLXOX\AppData\Local\Programs\Python\Python311\Lib\site-packages\briefcase\commands\base.py:1072 in _generate_template                                                 │
+│                                                                                                                                                                                  │
+│   1069 │   │   """                                                                                                                                                               │
+│   1070 │   │   # Make sure we have an updated cookiecutter template,                                                                                                             │
+│   1071 │   │   # checked out to the right branch                                                                                                                                 │
+│ ❱ 1072 │   │   cached_template = self.update_cookiecutter_cache(                                                                                                                 │
+│   1073 │   │   │   template=template,                                                                                                                                            │
+│   1074 │   │   │   branch=branch,                                                                                                                                                │
+│   1075 │   │   )                                                                                                                                                                 │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────────────────── locals ────────────────────────────────────────────────────────╮                                                        │
+│ │        branch = 'v0.3.22'                                                                                             │                                                        │
+│ │ extra_context = {                                                                                                     │                                                        │
+│ │                 │   'project_name': 'AndroidBitcoinMiner',                                                            │                                                        │
+│ │                 │   'base_theme': 'Theme.MaterialComponents.Light.DarkActionBar',                                     │                                                        │
+│ │                 │   'build_gradle_dependencies': {                                                                    │                                                        │
+│ │                 │   │   'implementation': ['com.google.android.material:material:1.12.0']                             │                                                        │
+│ │                 │   },                                                                                                │                                                        │
+│ │                 │   'app_name': 'androidbitcoinminer',                                                                │                                                        │
+│ │                 │   'version': '0.0.1',                                                                               │                                                        │
+│ │                 │   'bundle': 'hi.hcmlxox',                                                                           │                                                        │
+│ │                 │   'description': 'An android version of HCMLXOX PythonBitcoinMiner',                                │                                                        │
+│ │                 │   'sources': ['src/androidbitcoinminer'],                                                           │                                                        │
+│ │                 │   'formal_name': 'AndroidBitcoinMiner',                                                             │                                                        │
+│ │                 │   'url': 'https://github.com/HugoXOX3',                                                             │                                                        │
+│ │                 │   ... +29                                                                                           │                                                        │
+│ │                 }                                                                                                     │                                                        │
+│ │   output_path = WindowsPath('C:/Users/HCMLXOX/Desktop/androidbitcoinminer/build/androidbitcoinminer/android')         │                                                        │
+│ │          self = <briefcase.platforms.android.gradle.GradleCreateCommand object at 0x000002734616EC90>                 │                                                        │
+│ │      template = 'https://github.com/beeware/briefcase-android-gradle-template.git'                                    │                                                        │
+│ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                        │
+│                                                                                                                                                                                  │
+│ C:\Users\HCMLXOX\AppData\Local\Programs\Python\Python311\Lib\site-packages\briefcase\commands\base.py:999 in update_cookiecutter_cache                                           │
+│                                                                                                                                                                                  │
+│    996 │   │   │   │   │   │   │   "because the repository URL is incorrect."                                                                                                    │
+│    997 │   │   │   │   │   │   )                                                                                                                                                 │
+│    998 │   │   │   │   │                                                                                                                                                         │
+│ ❱  999 │   │   │   │   │   raise BriefcaseCommandError(                                                                                                                          │
+│   1000 │   │   │   │   │   │   f"Unable to clone repository {template!r}.\n\n{hint}"                                                                                             │
+│   1001 │   │   │   │   │   ) from e                                                                                                                                              │
+│   1002                                                                                                                                                                           │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────────────────────────── locals ────────────────────────────────────────────────────────────────╮                                        │
+│ │            branch = 'v0.3.22'                                                                                                         │                                        │
+│ │   cached_template = WindowsPath('C:/Users/HCMLXOX/AppData/Local/BeeWare/briefcase/Cache/templates/briefcase-android-gradle-template') │                                        │
+│ │ git_fatal_message = ["unable to access 'https://github.com/beeware/briefcase-android-gradle-template.g"+49]                           │                                        │
+│ │              hint = "Unable to access 'https://github.com/beeware/briefcase-android-gradle-template.g"+48                             │                                        │
+│ │              self = <briefcase.platforms.android.gradle.GradleCreateCommand object at 0x000002734616EC90>                             │                                        │
+│ │          template = 'https://github.com/beeware/briefcase-android-gradle-template.git'                                                │                                        │
+│ ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                        │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+BriefcaseCommandError: Unable to clone repository 'https://github.com/beeware/briefcase-android-gradle-template.git'.
+
+Unable to access 'https://github.com/beeware/briefcase-android-gradle-template.git/': Failure when receiving data from the peer.
+           Collecting extra information for log... started                                                                                                            console.py:467
+                                                                                                                                                                      console.py:471
+           Extra information:                                                                                                                                         console.py:472
+                                                                                                                                                                   subprocess.py:838
+           >>> Running Command:                                                                                                                                    subprocess.py:838
+           >>>     'C:\Users\HCMLXOX\AppData\Local\BeeWare\briefcase\Cache\tools\android_sdk\cmdline-tools\12.0\bin\sdkmanager.bat' --list_installed               subprocess.py:838
+           >>> Working Directory:                                                                                                                                  subprocess.py:838
+           >>>     C:\Users\HCMLXOX\Desktop\androidbitcoinminer                                                                                                    subprocess.py:838
+           >>> Environment Overrides:                                                                                                                              subprocess.py:838
+           >>>     ANDROID_HOME=C:\Users\HCMLXOX\AppData\Local\BeeWare\briefcase\Cache\tools\android_sdk                                                           subprocess.py:838
+           >>>     ANDROID_SDK_ROOT=C:\Users\HCMLXOX\AppData\Local\BeeWare\briefcase\Cache\tools\android_sdk                                                       subprocess.py:838
+           >>>     JAVA_HOME=C:\Users\HCMLXOX\AppData\Local\BeeWare\briefcase\Cache\tools\java17                                                                   subprocess.py:838
+[09:12:36] >>> Command Output:                                                                                                                                     subprocess.py:838
+           >>>     Loading package information...                                                                                                                  subprocess.py:838
+           >>>     Loading local repository...                                                                                                                     subprocess.py:838
+           >>>     [=========                              ] 25% Loading local repository...                                                                       subprocess.py:838
+           >>>     [=========                              ] 25% Fetch remote repository...                                                                        subprocess.py:838
+           >>>     [=======================================] 100% Fetch remote repository...                                                                       subprocess.py:838
+           >>>                                                                                                                                                     subprocess.py:838
+           >>>     Installed packages:                                                                                                                             subprocess.py:838
+           >>>       Path           | Version | Description                | Location                                                                              subprocess.py:838
+           >>>       -------        | ------- | -------                    | -------                                                                               subprocess.py:838
+           >>>       emulator       | 35.4.9  | Android Emulator           | emulator                                                                              subprocess.py:838
+           >>>       platform-tools | 35.0.2  | Android SDK Platform-Tools | platform-tools                                                                        subprocess.py:838
+           >>>                                                                                                                                                     subprocess.py:838
+           >>> Return code: 0                                                                                                                                      subprocess.py:838
+                                                                                                                                                                   subprocess.py:838
+           Collecting extra information for log... done                                                                                                               console.py:467

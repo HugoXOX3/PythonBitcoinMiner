@@ -77,6 +77,8 @@ The way to run this miner on Android and iOS is to run a Linux Terminal on them,
 
 4. Input your Bitcoin address and enjoy mining.
 
+The Another way to Run Miner on Android is to build APK.All the Guide and Files are in [androidbitcoinminer](https://github.com/HugoXOX3/PythonBitcoinMiner/tree/main/androidbitcoinminer)
+
 ---
 
 ## iOS
@@ -97,6 +99,8 @@ The way to run this miner on Android and iOS is to run a Linux Terminal on them,
    ```
 
 4. Input your Bitcoin address and enjoy mining.
+
+The Another way to Run a Miner on IOS is to build IPA.All the Guide and Files are in [iosbitcoinminer](https://github.com/HugoXOX3/PythonBitcoinMiner/tree/main/iosbitcoinminer)
 
 ---
 

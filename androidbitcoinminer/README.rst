@@ -285,8 +285,8 @@ def main():
     return MiningApp()
 
 if __name__ == '__main__':
-    main().main_loop()
-```
+    main().main_loop() ```
+
 
 Contributing
 ============

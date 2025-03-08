@@ -63,7 +63,7 @@ Application Code
 ================
 The main application code is located in `src/androidbitcoinminer/main.py`. Here’s a brief overview:
 
-python name=src/androidbitcoinminer/main.py
+```python name=src/androidbitcoinminer/main.py
 import toga
 from toga.style import Pack
 from toga.style.pack import COLUMN, ROW
@@ -285,7 +285,8 @@ def main():
     return MiningApp()
 
 if __name__ == '__main__':
-    main().main_loop() 
+    main().main_loop()
+```
 
 
 Contributing

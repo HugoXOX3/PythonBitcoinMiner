@@ -110,6 +110,16 @@ The Another way to Run a Miner on IOS is to build IPA.All the Guide and Files ar
 
 ---
 
-## Donation
+## Donations
 
-BTC:bc1qk5tpd68l4gfj6uzkq7u0l998dzvzyjpzhgpvnm
+If you find this project useful, consider supporting it with a Bitcoin donation:
+
+**Bitcoin Address**: `bc1qt7a6vl28czf00vmuse9j7xwpyr7jjt83m2hljh`
+
+[![Donate Bitcoin](https://img.shields.io/badge/Donate-Bitcoin-orange?logo=bitcoin)](bitcoin:bc1qt7a6vl28czf00vmuse9j7xwpyr7jjt83m2hljh)
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

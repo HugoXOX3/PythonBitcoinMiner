@@ -120,6 +120,18 @@ If you find this project useful, consider supporting it with a Bitcoin donation:
 
 ---
 
+## Real Time PythonBitcoinMiner Star Chart
+
+<a href="https://www.star-history.com/#HugoXOX3/PythonBitcoinMiner&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=HugoXOX3/PythonBitcoinMiner&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=HugoXOX3/PythonBitcoinMiner&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=HugoXOX3/PythonBitcoinMiner&type=Date" />
+ </picture>
+</a>
+
+---
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

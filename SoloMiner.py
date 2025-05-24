@@ -130,7 +130,7 @@ def mine_worker(job, target, extranonce1, extranonce2_size, nonce_start, nonce_e
             return
         
         nonce_bin = struct.pack('<I', nonce)
-        hash_result = hashlib.sha256(hashlib.sha256(hashlib.sha256(hashlib.sha256(block_header + nonce_bin).digest()).digest()).digest()).digest()
+        hash_result = hashlib.sha256(hashlib.sha256(block_header + nonce_bin).digest()).digest()
 
         if hash_result[::-1] < target_bin:
             difficulty = calculate_difficulty(hash_result)

@@ -3,7 +3,6 @@ import json
 import hashlib
 import struct
 import time
-import multiprocessing
 import os
 
 def get_input(prompt, data_type=str):
@@ -111,7 +110,7 @@ def calculate_difficulty(hash_result):
     difficulty = max_target / hash_int
     return difficulty
 
-def mine_worker(job, target, extranonce1, extranonce2_size, nonce_start, nonce_end, result_queue, stop_event):
+def mine(job, target, extranonce1, extranonce2_size):
     job_id, prevhash, coinb1, coinb2, merkle_branch, version, nbits, ntime, clean_jobs = job
 
     extranonce2 = struct.pack('<Q', 0)[:extranonce2_size]
@@ -125,10 +124,7 @@ def mine_worker(job, target, extranonce1, extranonce2_size, nonce_start, nonce_e
     block_header = (version + prevhash + merkle_root[::-1].hex() + ntime + nbits).encode('utf-8')
     target_bin = bytes.fromhex(target)[::-1]
 
-    for nonce in range(nonce_start, nonce_end):
-        if stop_event.is_set():
-            return
-        
+    for nonce in range(2**32):
         nonce_bin = struct.pack('<I', nonce)
         hash_result = hashlib.sha256(hashlib.sha256(block_header + nonce_bin).digest()).digest()
 
@@ -137,30 +133,7 @@ def mine_worker(job, target, extranonce1, extranonce2_size, nonce_start, nonce_e
             if difficulty > min_diff:
                 print(f"Nonce found: {nonce}, Difficulty: {difficulty}")
                 print(f"Hash: {hash_result[::-1].hex()}")
-                result_queue.put((job_id, extranonce2, ntime, nonce))
-                stop_event.set()
-                return
-
-def mine(sock, job, target, extranonce1, extranonce2_size):
-    num_processes = multiprocessing.cpu_count()
-    nonce_range = 2**32 // num_processes
-    result_queue = multiprocessing.Queue()
-    stop_event = multiprocessing.Event()
-
-    while not stop_event.is_set():
-        processes = []
-        for i in range(num_processes):
-            nonce_start = i * nonce_range
-            nonce_end = (i + 1) * nonce_range
-            p = multiprocessing.Process(target=mine_worker, args=(job, target, extranonce1, extranonce2_size, nonce_start, nonce_end, result_queue, stop_event))
-            processes.append(p)
-            p.start()
-
-        for p in processes:
-            p.join()
-
-        if not result_queue.empty():
-            return result_queue.get()
+                return job_id, extranonce2, ntime, nonce
 
 def submit_solution(sock, job_id, extranonce2, ntime, nonce):
     message = {
@@ -192,7 +165,7 @@ if __name__ == "__main__":
                 for response in receive_messages(sock):
                     if response['method'] == 'mining.notify':
                         job = response['params']
-                        result = mine(sock, job, job[6], extranonce1, extranonce2_size)
+                        result = mine(job, job[6], extranonce1, extranonce2_size)
                         if result:
                             submit_solution(sock, *result)
         except Exception as e:

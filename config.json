@@ -1,7 +1,11 @@
 {
- "pool_address":"public-pool.io",
- "pool_port": 21496,
- "user_name":"bc1qp84qrxsntmpyekp9vzdenlt8khnj0h4wqafeqe",
- "password":"x",
- "min_diff":0.01
+    "connection_type": "stratum",
+    "pool_address": "public-pool.io",
+    "pool_port": 21496,
+    "user_name": "bc1qt7a6vl28czf00vmuse9j7xwpyr7jjt83m2hljh",
+    "password": "x",
+    "min_diff": 0.01,
+    "rpc_user": "",
+    "rpc_password": "",
+    "rpc_port": 8332
 }

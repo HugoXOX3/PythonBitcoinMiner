@@ -4,6 +4,8 @@ import hashlib
 import struct
 import time
 import os
+import base64
+import http.client
 
 def get_input(prompt, data_type=str):
     while True:
@@ -14,27 +16,46 @@ def get_input(prompt, data_type=str):
             print(f"Invalid input. Please enter a valid {data_type.__name__}.")
 
 if os.path.isfile('config.json'):
-    print("config.json found,start mining")
+    print("config.json found, start mining")
     with open('config.json','r') as file:
         config = json.load(file)
+    connection_type = config.get("connection_type", "stratum")
     pool_address = config['pool_address']
     pool_port = config["pool_port"]
     username = config["user_name"]
     password = config["password"]
     min_diff = config["min_diff"]
+    rpc_user = config.get("rpc_user", "")
+    rpc_password = config.get("rpc_password", "")
+    rpc_port = config.get("rpc_port", 8332)
 else:
-    print("config.json doesn't exist,generating now")
+    print("config.json doesn't exist, generating now")
+    connection_type = get_input("Enter connection type (stratum/rpc): ").lower()
     pool_address = get_input("Enter the pool address: ")
     pool_port = get_input("Enter the pool port: ", int)
     user_name = get_input("Enter the user name: ")
     password = get_input("Enter the password: ")
     min_diff = get_input("Enter the minimum difficulty: ", float)
+    
+    if connection_type == "rpc":
+        rpc_user = get_input("Enter Bitcoin RPC username: ")
+        rpc_password = get_input("Enter Bitcoin RPC password: ")
+        rpc_port = get_input("Enter Bitcoin RPC port (default 8332): ", int) or 8332
+    else:
+        rpc_user = ""
+        rpc_password = ""
+        rpc_port = 8332
+    
     config_data = {
+        "connection_type": connection_type,
         "pool_address": pool_address,
         "pool_port": pool_port,
         "user_name": user_name,
         "password": password,
-        "min_diff": min_diff
+        "min_diff": min_diff,
+        "rpc_user": rpc_user,
+        "rpc_password": rpc_password,
+        "rpc_port": rpc_port
     }
     with open("config.json", "w") as config_file:
         json.dump(config_data, config_file, indent=4)
@@ -58,6 +79,32 @@ def connect_to_pool(pool_address, pool_port, timeout=30, retries=5):
         time.sleep(5)
     
     raise Exception("Failed to connect to the pool after multiple attempts")
+
+def connect_to_bitcoin_rpc(rpc_user, rpc_password, rpc_host="127.0.0.1", rpc_port=8332, timeout=30):
+    auth = base64.b64encode(f"{rpc_user}:{rpc_password}".encode()).decode('utf-8')
+    headers = {
+        "Authorization": f"Basic {auth}",
+        "Content-Type": "application/json"
+    }
+    
+    conn = http.client.HTTPConnection(rpc_host, port=rpc_port, timeout=timeout)
+    return conn, headers
+
+def send_rpc_request(conn, headers, method, params=None):
+    if params is None:
+        params = []
+    
+    payload = {
+        "jsonrpc": "1.0",
+        "id": "python_miner",
+        "method": method,
+        "params": params
+    }
+    
+    conn.request("POST", "/", json.dumps(payload), headers)
+    response = conn.getresponse()
+    data = response.read().decode('utf-8')
+    return json.loads(data)
 
 def send_message(sock, message):
     print(f"Sending message: {message}")
@@ -149,25 +196,50 @@ def submit_solution(sock, job_id, extranonce2, ntime, nonce):
                 print(f"Low difficulty share: {response['error']['message']}")
                 return
 
-if __name__ == "__main__":
-    if pool_address.startswith("stratum+tcp://"):
-        pool_address = pool_address[len("stratum+tcp://"):]
+def mine_with_rpc():
+    try:
+        conn, headers = connect_to_bitcoin_rpc(rpc_user, rpc_password, pool_address, rpc_port)
+        
+        while True:
+            template = send_rpc_request(conn, headers, "getblocktemplate", [{"rules": ["segwit"]}])
+            if 'error' in template:
+                print(f"Error getting block template: {template['error']}")
+                time.sleep(30)
+                continue
+            print("Got block template, mining...")
+            time.sleep(10) 
+            
+    except Exception as e:
+        print(f"RPC mining error: {e}")
+    finally:
+        if 'conn' in locals():
+            conn.close()
 
-    while True:
-        try:
-            sock = connect_to_pool(pool_address, pool_port)
-            
-            extranonce = subscribe(sock)
-            extranonce1, extranonce2_size = extranonce[1], extranonce[2]
-            authorize(sock, username, password)
-            
-            while True:
-                for response in receive_messages(sock):
-                    if response['method'] == 'mining.notify':
-                        job = response['params']
-                        result = mine(job, job[6], extranonce1, extranonce2_size)
-                        if result:
-                            submit_solution(sock, *result)
-        except Exception as e:
-            print(f"An error occurred: {e}. Reconnecting...")
-            time.sleep(5)
+if __name__ == "__main__":
+    if connection_type == "stratum":
+        if pool_address.startswith("stratum+tcp://"):
+            pool_address = pool_address[len("stratum+tcp://"):]
+
+        while True:
+            try:
+                sock = connect_to_pool(pool_address, pool_port)
+                
+                extranonce = subscribe(sock)
+                extranonce1, extranonce2_size = extranonce[1], extranonce[2]
+                authorize(sock, username, password)
+                
+                while True:
+                    for response in receive_messages(sock):
+                        if response['method'] == 'mining.notify':
+                            job = response['params']
+                            result = mine(job, job[6], extranonce1, extranonce2_size)
+                            if result:
+                                submit_solution(sock, *result)
+            except Exception as e:
+                print(f"An error occurred: {e}. Reconnecting...")
+                time.sleep(5)
+    
+    elif connection_type == "rpc":
+        mine_with_rpc()
+    else:
+        print(f"Invalid connection type: {connection_type}")

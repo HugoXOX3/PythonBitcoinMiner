@@ -33,7 +33,7 @@ else:
     connection_type = get_input("Enter connection type (stratum/rpc): ").lower()
     pool_address = get_input("Enter the pool address: ")
     pool_port = get_input("Enter the pool port: ", int)
-    user_name = get_input("Enter the user name: ")
+    username = get_input("Enter the user name: ")
     password = get_input("Enter the password: ")
     min_diff = get_input("Enter the minimum difficulty: ", float)
     
@@ -50,7 +50,7 @@ else:
         "connection_type": connection_type,
         "pool_address": pool_address,
         "pool_port": pool_port,
-        "user_name": user_name,
+        "user_name": username,
         "password": password,
         "min_diff": min_diff,
         "rpc_user": rpc_user,

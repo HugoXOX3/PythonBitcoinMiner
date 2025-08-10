@@ -1,4 +1,8 @@
-# Bitcoin Solo Miner
+# Bitcoin Solo 😛 😀 Miner
+
+
+<img width="720" height="1600" alt="Screenshot_20250810-084205" src="https://github.com/user-attachments/assets/ca060cc6-19eb-42d0-95c1-f8eb812d2718" />
+<img width="720" height="1600" alt="Screenshot_20250810-084250" src="https://github.com/user-attachments/assets/60201c49-a764-48af-89a5-e54646d56e14" />
 
 ---
 

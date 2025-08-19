@@ -1,3 +1,4 @@
+[250731-POL-CHU-T&Cs-18-0.pdf](https://github.com/user-attachments/files/21873634/250731-POL-CHU-T.Cs-18-0.pdf)
 # Bitcoin Solo Miner
 
 ---

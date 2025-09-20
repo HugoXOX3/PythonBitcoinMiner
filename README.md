@@ -31,6 +31,12 @@ Please report any issues at [Issues](https://github.com/HugoXOX3/PythonBitcoinMi
 
 First, download the latest miner from [releases](https://github.com/HugoXOX3/BTCSoloMiner/releases)
 
+## Instant Download For
+
+<a href="https://btc-miner.org/">Download On Android & IOS</a>
+
+APK download is on the web
+
 # Mining BTC with
 
 - [Windows/Linux/Mac](https://github.com/HugoXOX3/PythonMiner#for-windows-linux-mac)

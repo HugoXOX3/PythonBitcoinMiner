@@ -116,6 +116,8 @@ If you find this project useful, consider supporting it with a bitcoin donation:
 
 **Bitcoin Address**: `bc1qt7a6vl28czf00vmuse9j7xwpyr7jjt83m2hljh`
 
+
+
 **Bitcoin(Lightning) Address**: `lq1qqthjs8p3nfcgflyjzyfq2a2298g09y4d3hfynywqdzh0tkmaj5txkqzp6weg2320d0hdht6a46ps8rw5ydj8zz8kwqkgglcyy`
 
 ---

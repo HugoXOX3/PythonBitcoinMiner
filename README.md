@@ -4,7 +4,7 @@
 
 ## Latest Version
 
-[Version v2.0.0](https://github.com/HugoXOX3/PythonBitcoinMiner/releases)
+[Version v3.0.0](https://github.com/HugoXOX3/PythonBitcoinMiner/releases/tag/Minerv3.0.0)
 
 Please report any issues at [Issues](https://github.com/HugoXOX3/PythonBitcoinMiner/issues) to help improve and fix the program.
 

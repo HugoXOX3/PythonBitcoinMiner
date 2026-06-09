@@ -1,7 +1,7 @@
 {
     "connection_type": "stratum",
     "pool_address": "public-pool.io",
-    "pool_port": 21496,
+    "pool_port": 3333,
     "user_name": "bc1qh6ajmmpssheufcuzs5rrk9tz75f363ggxr8s8l",
     "password": "x",
     "min_diff": 0.01,

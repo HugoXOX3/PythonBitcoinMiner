@@ -31,20 +31,26 @@ if os.path.isfile('config.json'):
 else:
     print("config.json doesn't exist, generating now")
     connection_type = get_input("Enter connection type (stratum/rpc): ").lower()
-    pool_address = get_input("Enter the pool address: ")
-    pool_port = get_input("Enter the pool port: ", int)
-    username = get_input("Enter the user name: ")
-    password = get_input("Enter the password: ")
-    min_diff = get_input("Enter the minimum difficulty: ", float)
     
     if connection_type == "rpc":
         rpc_user = get_input("Enter Bitcoin RPC username: ")
         rpc_password = get_input("Enter Bitcoin RPC password: ")
         rpc_port = get_input("Enter Bitcoin RPC port (default 8332): ", int) or 8332
+        min_diff = get_input("Enter the minimum difficulty: ", float)
+        pool_address = ""
+        pool_port = 3333
+        username = ""
+        password = ""
     else:
         rpc_user = ""
         rpc_password = ""
         rpc_port = 8332
+        pool_address = get_input("Enter the pool address: ")
+        pool_port = get_input("Enter the pool port: ", int)
+        username = get_input("Enter the user name: ")
+        password = get_input("Enter the password: ")
+        min_diff = get_input("Enter the minimum difficulty: ", float)
+
     
     config_data = {
         "connection_type": connection_type,
@@ -151,13 +157,15 @@ def authorize(sock, username, password):
             print(f"Authorize response: {response}")
             return response['result']
 
+MAX_TARGET = 0xffff * (2**208)
+
+
 def calculate_difficulty(hash_result):
     hash_int = int.from_bytes(hash_result[::-1], byteorder='big')
-    max_target = 0xffff * (2**208)
-    difficulty = max_target / hash_int
-    return difficulty
+    return MAX_TARGET / hash_int
 
-def mine(job, target, extranonce1, extranonce2_size):
+
+def mine(job, extranonce1, extranonce2_size, share_diff):
     job_id, prevhash, coinb1, coinb2, merkle_branch, version, nbits, ntime, clean_jobs = job
 
     extranonce2 = struct.pack('<Q', 0)[:extranonce2_size]
@@ -168,19 +176,31 @@ def mine(job, target, extranonce1, extranonce2_size):
     for branch in merkle_branch:
         merkle_root = hashlib.sha256(hashlib.sha256((merkle_root + bytes.fromhex(branch))).digest()).digest()
 
-    block_header = (version + prevhash + merkle_root[::-1].hex() + ntime + nbits).encode('utf-8')
-    target_bin = bytes.fromhex(target)[::-1]
+    block_header = bytes.fromhex(version + prevhash + merkle_root[::-1].hex() + ntime + nbits)
+
+    hashes = 0
+    last_report = time.time()
 
     for nonce in range(2**32):
         nonce_bin = struct.pack('<I', nonce)
-        hash_result = hashlib.sha256(hashlib.sha256(block_header + nonce_bin).digest()).digest()
+        header = block_header + nonce_bin
+        hash_result = hashlib.sha256(hashlib.sha256(header).digest()).digest()
 
-        if hash_result[::-1] < target_bin:
-            difficulty = calculate_difficulty(hash_result)
-            if difficulty > min_diff:
-                print(f"Nonce found: {nonce}, Difficulty: {difficulty}")
-                print(f"Hash: {hash_result[::-1].hex()}")
-                return job_id, extranonce2, ntime, nonce
+        hashes += 1
+        now = time.time()
+        if now - last_report >= 1.0:
+            elapsed = now - last_report
+            hashrate = hashes / elapsed
+            print(f"Hashrate: {hashrate:,.0f} H/s", end='\r', flush=True)
+            hashes = 0
+            last_report = now
+
+        difficulty = calculate_difficulty(hash_result)
+        required_diff = max(min_diff, share_diff)
+        if difficulty >= required_diff:
+            print(f"Valid share found: nonce={nonce}, difficulty={difficulty:,.6f}")
+            print(f"Hash: {hash_result[::-1].hex()}")
+            return job_id, extranonce2, ntime, nonce
 
 def submit_solution(sock, job_id, extranonce2, ntime, nonce):
     message = {
@@ -220,6 +240,7 @@ if __name__ == "__main__":
         if pool_address.startswith("stratum+tcp://"):
             pool_address = pool_address[len("stratum+tcp://"):]
 
+        pool_difficulty = 1.0
         while True:
             try:
                 sock = connect_to_pool(pool_address, pool_port)
@@ -230,9 +251,12 @@ if __name__ == "__main__":
                 
                 while True:
                     for response in receive_messages(sock):
-                        if response['method'] == 'mining.notify':
+                        if response['method'] == 'mining.set_difficulty':
+                            pool_difficulty = float(response['params'][0])
+                            print(f"Pool share difficulty set to {pool_difficulty}")
+                        elif response['method'] == 'mining.notify':
                             job = response['params']
-                            result = mine(job, job[6], extranonce1, extranonce2_size)
+                            result = mine(job, extranonce1, extranonce2_size, pool_difficulty)
                             if result:
                                 submit_solution(sock, *result)
             except Exception as e:

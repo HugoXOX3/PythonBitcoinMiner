@@ -52,7 +52,7 @@ The first time you run this program will generate a config.json for you by input
 
 # Android & iOS
 
-The way to run this miner on Android and iOS is to run a Linux Terminal on them, like Termux & iSH.
+The way to run this miner on Android and iOS is to run a Linux Terminal on them namely Termux & iSH.
 
 ---
 
@@ -77,8 +77,6 @@ The way to run this miner on Android and iOS is to run a Linux Terminal on them,
 
 4. Input your Bitcoin address and enjoy mining.
 
-The Another way to Run Miner on Android is to build APK.All the Guide and Files are in [androidbitcoinminer](https://github.com/HugoXOX3/PythonBitcoinMiner/tree/main/androidbitcoinminer)
-
 ---
 
 ## iOS
@@ -100,21 +98,11 @@ The Another way to Run Miner on Android is to build APK.All the Guide and Files 
 
 4. Input your Bitcoin address and enjoy mining.
 
-The Another way to Run a Miner on IOS is to build IPA.All the Guide and Files are in [iosbitcoinminer](https://github.com/HugoXOX3/PythonBitcoinMiner/tree/main/iosbitcoinminer)
-
 ---
 
 ## Warning
 
 ⚠️ Mining Bitcoin on a mobile device with poor cooling may damage your device.
-
----
-
-## Donations
-
-If you find this project useful, consider supporting it with a bitcoin donation:
-
-**Bitcoin Address**: `bc1qt7a6vl28czf00vmuse9j7xwpyr7jjt83m2hljh`
 
 
 ---

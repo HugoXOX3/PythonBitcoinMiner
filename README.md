@@ -1,4 +1,4 @@
-# PythonBitcoinMiner
+# PythonSHA256dMiner
 
 ##  IMPORTANT DISCLAIMER !!!
 

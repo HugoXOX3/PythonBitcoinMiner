@@ -111,7 +111,7 @@ The way to run this miner on Android and iOS is to run a Linux Terminal on them 
 
 ---
 
-## Real Time PythonBitcoinMiner Star Chart
+## Real Time PythonSHA256dMiner Star Chart
 
 <a href="https://www.star-history.com/#HugoXOX3/PythonBitcoinMiner&Date">
  <picture>

@@ -1,10 +1,19 @@
-# Bitcoin Solo Miner
+# PythonBitcoinMiner
+
+##  IMPORTANT DISCLAIMER — READ FIRST
+
+**This project is NOT profitable and Mining Bitcoin on a mobile device with poor cooling may damage your device.**
+
+This is a **educational project** created to study:
+- The technical mechanics of Bitcoin mining (SHA-256 hashing, nonce iteration, proof-of-work)
+- Python programming, multithreading, and network communication
+- Blockchain fundamentals from a computer science perspective
 
 ---
 
 ## Latest Version
 
-[Version v3.0.0](https://github.com/HugoXOX3/PythonBitcoinMiner/releases/tag/Minerv3.0.0)
+[Version v3.1.0](https://github.com/HugoXOX3/PythonBitcoinMiner/releases/tag/Minerv3.1.0)
 
 Please report any issues at [Issues](https://github.com/HugoXOX3/PythonBitcoinMiner/issues) to help improve and fix the program.
 
@@ -97,13 +106,6 @@ The way to run this miner on Android and iOS is to run a Linux Terminal on them 
    ```
 
 4. Input your Bitcoin address and enjoy mining.
-
----
-
-## Warning
-
-⚠️ Mining Bitcoin on a mobile device with poor cooling may damage your device.
-
 
 ---
 

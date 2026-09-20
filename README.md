@@ -1,13 +1,15 @@
 # PythonBitcoinMiner
 
-##  IMPORTANT DISCLAIMER — READ FIRST
+##  IMPORTANT DISCLAIMER !!!
 
-**This project is NOT profitable and Mining Bitcoin on a mobile device with poor cooling may damage your device.**
+**This project is NOT profitable.**
+
+**Mining might damage your devices**
 
 This is a **educational project** created to study:
 - The technical mechanics of Bitcoin mining (SHA-256 hashing, nonce iteration, proof-of-work)
 - Python programming, multithreading, and network communication
-- Blockchain fundamentals from a computer science perspective
+- Blockchain fundamentals
 
 ---
 
